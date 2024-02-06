@@ -6,7 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "dev": "vue-cli-service lint && vue-cli-service serve"
+    "dev": "vue-cli-service lint && vue-cli-service serve",
+	"deployFull": "vue-cli-service lint && vue-cli-service build && gh-pages -d dist",
+	"deployOnly": "gh-pages -d dist"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -26,6 +28,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
+    "gh-pages": "^6.1.1",
     "prettier": "^2.4.1"
   },
   "eslintConfig": {
