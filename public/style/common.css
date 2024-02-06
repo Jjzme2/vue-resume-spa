@@ -1,0 +1,26 @@
+.navbar-element {
+	align-items: center;
+	background-color: var(--primary-panel-color);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	display: flex;
+	height: 60px;
+	justify-content: space-between;
+	padding: 1rem 3rem;
+}
+
+.main-content {
+	background-color: var(--primary-background-color);
+	padding: 3rem;
+}
+
+.quote-display {
+	background-image: url("/public/images/app/BannerImage.jpg");
+	background-size: auto 500%;
+	border-radius: 5px;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+	padding: 3rem;
+}
+
+.quote {
+	color: darkgreen;
+}

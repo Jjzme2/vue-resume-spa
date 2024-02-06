@@ -1,18 +1,30 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <BaseView>
+    <template #default>
+      <greetingText text="Nice to have you here!"></greetingText>
+      <directoryPanel></directoryPanel>
+    </template>
+  </BaseView>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import BaseView from "./BaseView.vue";
+import greetingText from "@/components/app/mainElements/text/GreetingText.vue";
+import directoryPanel from "@/components/app/mainElements/panels/DirectoryPanel.vue";
 
 export default {
   name: "HomeView",
   components: {
-    HelloWorld,
+    BaseView,
+    greetingText,
+    directoryPanel,
   },
+  data() {},
 };
 </script>
+
+<style scoped>
+h1 {
+  margin-bottom: 1rem;
+}
+</style>
