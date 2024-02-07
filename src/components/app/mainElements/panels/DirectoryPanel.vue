@@ -12,7 +12,6 @@
 <script>
 import AboutMe from "./AboutMe.vue";
 // import Tab2 from "./Tab2.vue";
-// import other tab components as needed
 
 export default {
   data() {

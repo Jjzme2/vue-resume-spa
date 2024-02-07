@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 
-const appName = "OBJECTNAME";
+const appName = "ILYTAT Blog";
 
 const routeColor = "#333333";
 
