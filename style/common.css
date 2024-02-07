@@ -1,3 +1,40 @@
+.about-me-header {
+	background-color: var(--primary-panel-color);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin: 3rem auto;
+	padding: 3rem;
+}
+
+.about-me-header h1 {
+	color: var(--primary-text-color);
+}
+
+.about-me-header p {
+	color: var(--secondary-text-color);
+}
+
+.about-me-content {
+	background-color: var(--primary-background-color);
+	display: flex;
+	padding: 3rem;
+}
+
+.about-me-image {
+	border-radius: 50%;
+	height: auto;
+	margin: auto;
+}
+
+.about-me-text {
+	color: var(--primary-text-color);
+	margin: 3rem 3rem auto;
+}
+
+.main-content {
+	background-color: var(--primary-background-color);
+	padding: 3rem;
+}
+
 .navbar-element {
 	align-items: center;
 	background-color: var(--primary-panel-color);
@@ -6,11 +43,6 @@
 	height: 60px;
 	justify-content: space-between;
 	padding: 1rem 3rem;
-}
-
-.main-content {
-	background-color: var(--primary-background-color);
-	padding: 3rem;
 }
 
 .quote-display {
@@ -23,4 +55,20 @@
 
 .quote {
 	color: darkgreen;
+}
+
+.tabs {
+	background-color: var(--secondary-panel-color);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: space-around;
+	cursor: pointer;
+	margin: 3rem auto;
+	padding: 1rem;
+	max-width: 300px;
+}
+
+.tabs:hover {
+	background-color: var(--primary-panel-color);
+	box-shadow: 3 3 10px rgba(0, 0, 0, 0.1);
 }
