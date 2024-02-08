@@ -2,18 +2,22 @@
   <!-- Basic Email form -->
   <div class="contact-form">
     <form @submit.prevent="sendEmail">
-      <label for="name">Your Name:</label>
-      <input v-model="name" type="text" id="name" name="name" required />
-      <label for="email">Your Email:</label>
-      <input v-model="email" type="email" id="email" name="email" required />
-      <label for="message">Your Message:</label>
-      <textarea
-        v-model="message"
-        id="message"
-        name="message"
-        required
-      ></textarea>
-      <input type="submit" value="Submit" />
+      <div class="contact-display">
+        <label for="name">Your Name:</label>
+        <input v-model="name" type="text" id="name" name="name" required />
+        <label for="email">Your Email:</label>
+        <input v-model="email" type="email" id="email" name="email" required />
+      </div>
+      <div class="contact-display">
+        <label for="message">Your Message:</label>
+        <textarea
+          v-model="message"
+          id="message"
+          name="message"
+          required
+        ></textarea>
+        <input type="submit" value="Submit" />
+      </div>
     </form>
   </div>
 </template>

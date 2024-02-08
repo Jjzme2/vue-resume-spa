@@ -15,9 +15,9 @@
 </template>
 
 <script>
-import AboutMe from "./AboutMe.vue";
-import ContactMe from "./ContactMe.vue";
-import MyExperience from "./MyExperience.vue";
+import AboutMe from "./About/AboutMe.vue";
+import ContactMe from "./About/ContactMe.vue";
+import MyExperience from "./About/MyExperience.vue";
 
 // import Tab2 from "./Tab2.vue";
 
@@ -25,14 +25,18 @@ export default {
   data() {
     return {
       activeTab: 0,
-      tabs: [
-        { name: "About Me", component: AboutMe },
-        { name: "Contact Me", component: ContactMe },
-        { name: "Experience", component: MyExperience },
-        // { name: "Tab 2", component: Tab2 },
-        // add other tabs as needed
-      ],
     };
+  },
+  components: {
+    AboutMe,
+    ContactMe,
+    MyExperience,
+  },
+  props: {
+    tabs: {
+      type: Array,
+      required: true,
+    },
   },
 };
 </script>

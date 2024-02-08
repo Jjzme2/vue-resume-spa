@@ -6,7 +6,10 @@
     </div>
     <div class="about-me-content">
       <div class="about-me-image">
-        <img src="../../../../assets/images/FacebookImageFamily.jpg" alt="Jj" />
+        <img
+          src="../../../../../assets/images/FacebookImageFamily.jpg"
+          alt="Jj"
+        />
       </div>
       <div class="about-me-text">
         <p>
