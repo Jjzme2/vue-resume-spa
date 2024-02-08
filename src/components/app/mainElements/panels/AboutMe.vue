@@ -37,12 +37,12 @@
         <p>
           Today, my passion for coding burns brighter than ever. Whether it’s a
           sleek web app or a quirky game, I dive in with enthusiasm. If you ask
-          my wife, daughter, and now {{ ericsAge }}-year-old son, And guess
-          what? I’m still dreaming. Not just for myself, but for others too.
-          Somewhere out there, someone might be where I once stood—yearning to
-          break into this fascinating world of bits and bytes. If I can guide
-          them, inspire them, or simply share a laugh over a coding challenge, I
-          consider it a win.
+          my wife, daughter, and now {{ ericsAge }}-year-old son, probably a
+          little too much enthusiasm, and guess what? I’m still dreaming. Not
+          just for myself, but for others too. Somewhere out there, someone
+          might be where I once stood—yearning to break into this fascinating
+          world of bits and bytes. If I can guide them, inspire them, or simply
+          share a laugh over a coding challenge, I consider it a win.
         </p>
 
         <p>

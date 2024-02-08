@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-
-const appName = "ILYTAT Blog";
+import WhoIsILYTAT from "../views/WhoIsILYTAT.vue";
 
 const routeColor = "#333333";
+const appName = "ILYTAT Blog";
 
 const routes = [
   {
@@ -12,6 +12,16 @@ const routes = [
     component: HomeView,
     meta: {
       title: `${appName} -- Home`,
+      style: { color: routeColor },
+      hideInNav: false,
+    },
+  },
+  {
+    path: "/Who-Is-ILYTAT",
+    name: "WhoIsILYTAT",
+    component: WhoIsILYTAT,
+    meta: {
+      title: `${appName} -- Who Is ILYTAT`,
       style: { color: routeColor },
       hideInNav: false,
     },

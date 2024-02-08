@@ -2,9 +2,9 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import utilPlugin from "@/assets/util/utilPlugin.js";
+import utilPlugin from "./assets/util/utilPlugin.js";
 
-const appName = "ILYTAT Blog";
+const appName = process.env.VUE_APP_APP_NAME || "ILYTAT Blog";
 
 router.beforeEach((to, from, next) => {
   document.title = to.meta.title || appName; // Set the title from the route meta or use a default title

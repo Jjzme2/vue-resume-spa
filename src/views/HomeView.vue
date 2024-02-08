@@ -1,25 +1,38 @@
 <template>
   <BaseView>
     <template #default>
-      <greetingText text="Nice to have you here!"></greetingText>
-      <directoryPanel></directoryPanel>
+      <h1>ILYTAT Homepage</h1>
+      <div>
+        <!-- Show things here: Games/Blogs/About -->
+        <!-- <button @click="showGames">Games</button> -->
+        <!-- <button @click="showBlogs">Blogs</button> -->
+        <button @click="showAbout">About</button>
+      </div>
     </template>
   </BaseView>
 </template>
 
 <script>
 import BaseView from "./BaseView.vue";
-import greetingText from "@/components/app/mainElements/text/GreetingText.vue";
-import directoryPanel from "@/components/app/mainElements/panels/DirectoryPanel.vue";
 
 export default {
   name: "HomeView",
   components: {
     BaseView,
-    greetingText,
-    directoryPanel,
   },
   data() {},
+  methods: {
+    showGames() {
+      console.log("Show games");
+    },
+    showBlogs() {
+      console.log("Show blogs");
+    },
+    showAbout() {
+      this.$router.push({ name: "WhoIsILYTAT" });
+      //   console.log("Show about");
+    },
+  },
 };
 </script>
 
