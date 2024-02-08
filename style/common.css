@@ -1,33 +1,18 @@
-.about-me-header {
-	background-color: var(--primary-panel-color);
+.button {
+	background-color: var(--primary-button-color);
+	border: none;
+	border-radius: 5px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	margin: 3rem auto;
-	padding: 3rem;
+	color: var(--primary-button-text-color);
+	cursor: pointer;
+	font-size: 1rem;
+	margin: 1rem;
+	padding: 1rem;
 }
 
-.about-me-header h1 {
-	color: var(--primary-text-color);
-}
-
-.about-me-header p {
-	color: var(--secondary-text-color);
-}
-
-.about-me-content {
-	background-color: var(--primary-background-color);
-	display: flex;
-	padding: 3rem;
-}
-
-.about-me-image {
-	border-radius: 50%;
-	height: auto;
-	margin: auto;
-}
-
-.about-me-text {
-	color: var(--primary-text-color);
-	margin: 3rem 3rem auto;
+.button:hover {
+	background-color: var(--primary-button-hover-color);
+	color: var(--primary-button-hover-text-color);
 }
 
 .main-content {
@@ -57,18 +42,25 @@
 	color: darkgreen;
 }
 
-.tabs {
-	background-color: var(--secondary-panel-color);
+
+.tab {
+	background-color: var(--primary-panel-color);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	display: flex;
-	justify-content: space-around;
 	cursor: pointer;
-	margin: 3rem auto;
+	margin: 0.5rem;
 	padding: 1rem;
 	max-width: 300px;
 }
 
-.tabs:hover {
-	background-color: var(--primary-panel-color);
-	box-shadow: 3 3 10px rgba(0, 0, 0, 0.1);
+.tab:hover {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.tabs {
+	background-color: var(--secondary-panel-color);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: space-evenly;
+	margin: 1rem auto;
+	padding: 0.25rem;
 }
