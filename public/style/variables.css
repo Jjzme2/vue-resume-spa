@@ -6,4 +6,10 @@
 	--secondary-background-color: #fff;
 	--secondary-panel-color: #f5f5f5;
 	--secondary-text-color: #666;
+
+	--primary-button-color: #007bff;
+	--primary-button-text-color: #fff;
+	--primary-button-hover-color: #0056b3;
+	--primary-button-hover-text-color: #fff;
+
 }

@@ -1,7 +1,12 @@
 <template>
   <div>
     <div class="tabs">
-      <div v-for="(tab, index) in tabs" :key="index" @click="activeTab = index">
+      <div
+        v-for="(tab, index) in tabs"
+        :key="index"
+        @click="activeTab = index"
+        class="tab"
+      >
         {{ tab.name }}
       </div>
     </div>
@@ -11,6 +16,9 @@
 
 <script>
 import AboutMe from "./AboutMe.vue";
+import ContactMe from "./ContactMe.vue";
+import MyExperience from "./MyExperience.vue";
+
 // import Tab2 from "./Tab2.vue";
 
 export default {
@@ -19,6 +27,8 @@ export default {
       activeTab: 0,
       tabs: [
         { name: "About Me", component: AboutMe },
+        { name: "Contact Me", component: ContactMe },
+        { name: "Experience", component: MyExperience },
         // { name: "Tab 2", component: Tab2 },
         // add other tabs as needed
       ],

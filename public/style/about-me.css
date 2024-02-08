@@ -1,0 +1,31 @@
+.about-me-header {
+	background-color: var(--primary-panel-color);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin: 3rem auto;
+	padding: 3rem;
+}
+
+.about-me-header h1 {
+	color: var(--primary-text-color);
+}
+
+.about-me-header p {
+	color: var(--secondary-text-color);
+}
+
+.about-me-content {
+	background-color: var(--primary-background-color);
+	display: flex;
+	padding: 3rem;
+}
+
+.about-me-image {
+	border-radius: 50%;
+	height: auto;
+	margin: auto;
+}
+
+.about-me-text {
+	color: var(--primary-text-color);
+	margin: 3rem 3rem auto;
+}
