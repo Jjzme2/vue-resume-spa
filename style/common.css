@@ -20,16 +20,6 @@
 	padding: 3rem;
 }
 
-.navbar-element {
-	align-items: center;
-	background-color: var(--primary-panel-color);
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	display: flex;
-	height: 60px;
-	justify-content: space-between;
-	padding: 1rem 3rem;
-}
-
 .quote-display {
 	background-image: url("/public/images/app/BannerImage.jpg");
 	background-size: auto 500%;
@@ -40,27 +30,4 @@
 
 .quote {
 	color: darkgreen;
-}
-
-
-.tab {
-	background-color: var(--primary-panel-color);
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	cursor: pointer;
-	margin: 0.5rem;
-	padding: 1rem;
-	max-width: 300px;
-}
-
-.tab:hover {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.tabs {
-	background-color: var(--secondary-panel-color);
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	display: flex;
-	justify-content: space-evenly;
-	margin: 1rem auto;
-	padding: 0.25rem;
 }
