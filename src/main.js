@@ -1,5 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
+import hljs from "highlight.js";
+import "highlight.js/styles/atom-one-dark.css";
 import router from "./router";
 import store from "./store";
 import utilPlugin from "./assets/util/utilPlugin.js";
@@ -11,4 +13,9 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
-createApp(App).use(store).use(router).use(utilPlugin).mount("#app");
+createApp(App)
+  .use(store)
+  .use(router)
+  .use(hljs.vuePlugin)
+  .use(utilPlugin)
+  .mount("#app");

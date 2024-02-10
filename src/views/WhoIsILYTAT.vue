@@ -20,7 +20,7 @@ import ContactMe from "@/components/app/mainElements/panels/About/ContactMe.vue"
 import MyExperience from "@/components/app/mainElements/panels/About/MyExperience.vue";
 
 export default {
-  name: "HomeView",
+  name: "WhoIsView",
   components: {
     BaseView,
     // greetingText,
