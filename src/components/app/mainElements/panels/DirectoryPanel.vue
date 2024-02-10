@@ -10,29 +10,26 @@
         {{ tab.name }}
       </div>
     </div>
-    <component :is="tabs[activeTab].component"></component>
+    <component
+      :is="tabs[activeTab].component"
+      v-bind="tabs[activeTab].params"
+    ></component>
   </div>
 </template>
 
 <script>
-import AboutMe from "./AboutMe.vue";
-import ContactMe from "./ContactMe.vue";
-import MyExperience from "./MyExperience.vue";
-
-// import Tab2 from "./Tab2.vue";
-
 export default {
   data() {
     return {
       activeTab: 0,
-      tabs: [
-        { name: "About Me", component: AboutMe },
-        { name: "Contact Me", component: ContactMe },
-        { name: "Experience", component: MyExperience },
-        // { name: "Tab 2", component: Tab2 },
-        // add other tabs as needed
-      ],
     };
+  },
+  components: {},
+  props: {
+    tabs: {
+      type: Array,
+      required: true,
+    },
   },
 };
 </script>

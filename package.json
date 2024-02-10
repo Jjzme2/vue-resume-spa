@@ -11,8 +11,11 @@
     "deployOnly": "gh-pages -d dist"
   },
   "dependencies": {
+    "axios": "^1.6.7",
     "core-js": "^3.35.1",
     "emailjs-com": "^3.2.0",
+    "highlight.js": "^11.9.0",
+    "markdown-it": "^14.0.0",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"
@@ -20,7 +23,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
-    "@vitejs/plugin-vue": "^5.0.3",
+    "@babel/plugin-transform-private-methods": "^7.23.3",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
@@ -31,7 +34,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
     "gh-pages": "^6.1.1",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "vue-cli-plugin-markdown": "~0.1.2"
   },
   "eslintConfig": {
     "root": true,

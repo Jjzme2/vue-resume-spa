@@ -3,7 +3,7 @@
     <template #default>
       <goTobutton buttonText="Go Home"></goTobutton>
       <greetingText text="Nice to have you here!"></greetingText>
-      <directoryPanel></directoryPanel>
+      <directoryPanel :tabs="aboutTabs"></directoryPanel>
     </template>
   </BaseView>
 </template>
@@ -14,15 +14,28 @@ import BaseView from "./BaseView.vue";
 import directoryPanel from "@/components/app/mainElements/panels/DirectoryPanel.vue";
 import goTobutton from "@/components/app/mainElements/buttons/GoToButton.vue";
 
+// about me components
+import AboutMe from "@/components/app/mainElements/panels/About/AboutMe.vue";
+import ContactMe from "@/components/app/mainElements/panels/About/ContactMe.vue";
+import MyExperience from "@/components/app/mainElements/panels/About/MyExperience.vue";
+
 export default {
-  name: "HomeView",
+  name: "WhoIsView",
   components: {
     BaseView,
     // greetingText,
     goTobutton,
     directoryPanel,
   },
-  data() {},
+  data() {
+    return {
+      aboutTabs: [
+        { name: "About Me", component: AboutMe },
+        { name: "Contact Me", component: ContactMe },
+        { name: "Experience", component: MyExperience },
+      ],
+    };
+  },
 };
 </script>
 

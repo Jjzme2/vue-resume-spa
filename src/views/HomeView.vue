@@ -5,7 +5,7 @@
       <div>
         <!-- Show things here: Games/Blogs/About -->
         <!-- <button @click="showGames">Games</button> -->
-        <!-- <button @click="showBlogs">Blogs</button> -->
+        <button @click="showNotes">Notes</button>
         <button @click="showAbout">About</button>
       </div>
     </template>
@@ -27,6 +27,9 @@ export default {
     },
     showBlogs() {
       console.log("Show blogs");
+    },
+    showNotes() {
+      this.$router.push({ name: "markdown-files" });
     },
     showAbout() {
       this.$router.push({ name: "WhoIsILYTAT" });

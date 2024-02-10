@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import quotes from "/public/js/quotes";
+import quotes from "@/assets/data/quotes.js";
 
 export default {
   name: "QuoteDisplay",
