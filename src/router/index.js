@@ -30,7 +30,7 @@ const routes = [
   {
     path: "/ILYTAT-Study",
     name: "markdown-files",
-    component: () => NoteView,
+    component: NoteView,
     meta: {
       title: `${appName} -- ILYTAT Notes`,
       style: { color: routeColor },
