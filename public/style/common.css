@@ -15,6 +15,13 @@
 	color: var(--primary-button-hover-text-color);
 }
 
+.component-header-text {
+	color: var(--primary-text-color);
+	font-size: 2rem;
+	margin: 1rem auto;
+	text-align: center;
+}
+
 .footer {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr; /* Three equal columns */

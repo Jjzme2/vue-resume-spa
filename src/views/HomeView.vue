@@ -1,7 +1,7 @@
 <template>
   <BaseView>
     <template #default>
-      <h1>ILYTAT Homepage</h1>
+      <greetingText text="ILYTAT Homepage"></greetingText>
       <div>
         <!-- Show things here: Games/Blogs/About -->
         <!-- <button @click="showGames">Games</button> -->
@@ -14,11 +14,13 @@
 
 <script>
 import BaseView from "./BaseView.vue";
+import greetingText from "@/components/app/mainElements/text/GreetingText.vue";
 
 export default {
   name: "HomeView",
   components: {
     BaseView,
+    greetingText,
   },
   data() {},
   methods: {

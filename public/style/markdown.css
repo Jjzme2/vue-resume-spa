@@ -49,6 +49,7 @@
   padding: 1em;
   overflow-x: auto;
   max-width: 75%;
+  text-align: start;
 }
 
 .markdown-content table {
