@@ -1,0 +1,68 @@
+.coding-language-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1rem;
+  background-color: var(--color-primary);
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  width: 100%;
+}
+
+.coding-language-card h2,
+.coding-language-card p {
+  margin: 0 auto;
+  color: var(--color-text);
+}
+
+.coding-language-card h2 {
+  font-size: 1.5rem;
+}
+
+.coding-language-card p {
+  font-size: 1rem;
+}
+
+.coding-language-card textarea {
+  width: 90%;
+  height: 100%;
+  padding: 1rem;
+  font-size: .75rem;
+  color: var(--color-text);
+  background-color: var(--primary-panel-color);
+  border: none;
+  border-radius: 0.5rem;
+  resize: none;
+}
+
+/* Style the scrollbar for webkit-based browsers */
+.coding-language-card textarea::-webkit-scrollbar {
+  width: 0;
+}
+
+.coding-language-card textarea::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 4px;
+}
+
+/* Style the scrollbar for other browsers */
+.coding-language-card textarea {
+  scrollbar-width: none;
+  scrollbar-color: var(--color-primary) var(--primary-panel-color);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
