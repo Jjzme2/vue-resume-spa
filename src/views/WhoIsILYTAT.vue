@@ -10,7 +10,6 @@
 
 <script>
 import BaseView from "./BaseView.vue";
-// import greetingText from "@/components/app/mainElements/text/GreetingText.vue";
 import directoryPanel from "@/components/app/mainElements/panels/DirectoryPanel.vue";
 import goTobutton from "@/components/app/mainElements/buttons/GoToButton.vue";
 
@@ -23,16 +22,15 @@ export default {
   name: "WhoIsView",
   components: {
     BaseView,
-    // greetingText,
     goTobutton,
     directoryPanel,
   },
   data() {
     return {
       aboutTabs: [
+        { name: "Experience", component: MyExperience },
         { name: "About Me", component: AboutMe },
         { name: "Contact Me", component: ContactMe },
-        { name: "Experience", component: MyExperience },
       ],
     };
   },

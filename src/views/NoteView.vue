@@ -24,9 +24,14 @@ export default {
     return {
       FileTabs: [
         {
-          name: "Building a static website with Github pages.",
+          name: "Keep 'em Separated",
           component: MarkdownViewer,
-          params: { fileName: "StaticWebsiteOnGitHubPages" },
+          params: { fileName: "ImportanceOfSOC" },
+        },
+        {
+          name: "What is a Static website?",
+          component: MarkdownViewer,
+          params: { fileName: "WhatIsAStaticWebsite" },
         },
         // { name: "Contact Me", component: "ContactMe" },
         // { name: "My Experience", component: "MyExperience" },

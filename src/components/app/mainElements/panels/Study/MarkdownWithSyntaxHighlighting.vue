@@ -9,8 +9,6 @@
 
 <script>
 import MarkdownIt from "markdown-it";
-import hljs from "highlight.js";
-import "highlight.js/styles/github.css"; // Choose a style that suits your design
 
 export default {
   props: {
@@ -46,27 +44,8 @@ export default {
         html: true,
         linkify: true,
         typographer: true,
-        highlight: function (str, lang) {
-          if (lang && hljs.getLanguage(lang)) {
-            try {
-              return (
-                '<pre class="hljs"><code>' +
-                hljs.highlight(lang, str, true).value +
-                "</code></pre>"
-              );
-            } catch (e) {
-              console.error(e);
-            }
-          }
-          return (
-            '<pre class="hljs"><code>' +
-            this.utils.escapeHtml(str) +
-            "</code></pre>"
-          );
-        },
       });
       return md.render(markdown);
-      //   return md.render(markdown);
     },
   },
 };
