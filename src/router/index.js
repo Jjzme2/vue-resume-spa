@@ -4,7 +4,7 @@ import WhoIsILYTAT from "../views/WhoIsILYTAT.vue";
 import NoteView from "../views/NoteView.vue";
 
 const routeColor = "#333333";
-const appName = "ILYTAT Blog";
+const appName = "ILYTAT";
 
 const routes = [
   {
@@ -22,7 +22,7 @@ const routes = [
     name: "WhoIsILYTAT",
     component: WhoIsILYTAT,
     meta: {
-      title: `${appName} -- Who Is ILYTAT`,
+      title: `${appName} -- About`,
       style: { color: routeColor },
       hideInNav: false,
     },
@@ -32,7 +32,7 @@ const routes = [
     name: "markdown-files",
     component: NoteView,
     meta: {
-      title: `${appName} -- ILYTAT Notes`,
+      title: `${appName} -- Thoughts`,
       style: { color: routeColor },
       hideInNav: false,
     },
