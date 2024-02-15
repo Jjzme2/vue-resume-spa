@@ -2,6 +2,14 @@
   <BaseView>
     <template #default>
       <goToButton buttonText="Go Home"></goToButton>
+      <div class="description-area">
+        <p>
+          Given my appreciation for the voice we all have, I wanted to create a
+          space where I could share my thoughts and experiences. To that end,
+          I've created a section here exclusively for that. If you find yourself
+          curious, I hope some of my thoughts can help you in some way.
+        </p>
+      </div>
       <directoryPanel :tabs="this.FileTabs"></directoryPanel>
     </template>
   </BaseView>
@@ -14,7 +22,7 @@ import directoryPanel from "@/components/app/mainElements/panels/DirectoryPanel.
 import MarkdownViewer from "@/components/app/mainElements/panels/Study/MarkdownWithSyntaxHighlighting.vue";
 
 export default {
-  name: "NoteView",
+  name: "BlogView",
   components: {
     BaseView,
     directoryPanel,
@@ -22,6 +30,7 @@ export default {
   },
   data() {
     return {
+      developerTaskID: "0d00847c-0c76-419d-a9d2-ef18f25bc269",
       FileTabs: [
         {
           name: "Keep 'em Separated",

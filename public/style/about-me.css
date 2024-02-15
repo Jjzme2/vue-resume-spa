@@ -1,43 +1,96 @@
+/* About me header */
 .about-me-header {
-	background-color: var(--primary-panel-color);
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	margin: 3rem auto;
-	padding: 3rem;
+    background-color: var(--primary-panel-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 3rem auto;
+    padding: 3rem;
+    text-align: center;
 }
 
 .about-me-header h1 {
-	color: var(--primary-text-color);
+    color: var(--primary-text-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .about-me-header p {
-	color: var(--secondary-text-color);
+    color: var(--secondary-text-color);
 }
 
+/* About me content */
 .about-me-content {
-	background-color: var(--primary-background-color);
-	display: flex;
-	padding: 3rem;
+    background-color: var(--primary-background-color);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem;
 }
 
 .about-me-image {
-	border-radius: 50%;
-	height: auto;
-	margin: auto;
+    border-radius: 50%;
+    flex: 0 0 200px;
+    height: 200px;
+    margin: auto;
+    width: 200px;
 }
 
 .about-me-text {
-	color: var(--primary-text-color);
-	margin: 3rem 3rem auto;
+    color: var(--primary-text-color);
+    flex: 1;
+    margin: 0 3rem;
 }
 
+/* Me area -- HomePage */
+.me-area {
+	align-items: center;
+    display: flex;
+	flex-direction: row-reverse;
+	justify-content: center;
+    margin-top: 3rem;
+}
+
+.me-area img {
+    border-radius: 50%;
+    height: auto;
+    max-width: 200px;
+}
+
+.me-area p {
+	text-align: end;
+    color: var(--primary-text-color);
+	margin: 0 3rem;
+    max-width: 40%;
+}
+
+/* Media queries */
 @media (max-width: 768px) {
-	.about-me-content {
-		flex-direction: column;
-	}
-	.about-me-image {
-		margin: 3rem auto;
-	}
-	.about-me-text {
-		margin: 3rem auto;
-	}
+    .about-me-content {
+        padding: 2rem;
+    }
+
+    .about-me-image {
+        flex: 1 0 auto;
+        margin: 2rem auto;
+        max-width: 200px;
+    }
+
+    .about-me-text {
+        margin: 2rem auto;
+        max-width: 100%;
+    }
+
+    .me-area {
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 80%;
+    }
+
+    .me-area img {
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    .me-area p {
+        margin: 2rem auto;
+        max-width: 100%;
+    }
 }
