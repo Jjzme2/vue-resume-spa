@@ -1,7 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import WhoIsILYTAT from "../views/WhoIsILYTAT.vue";
-import NoteView from "../views/NoteView.vue";
+import BlogView from "../views/BlogView.vue";
+import ServicesView from "../views/ServicesView.vue";
+import ProjectsView from "../views/ProjectsView.vue";
+import ResumeView from "../views/ResumeView.vue";
+import VueError from "../views/VueError.vue";
 
 const routeColor = "#333333";
 const appName = "ILYTAT";
@@ -28,13 +32,53 @@ const routes = [
     },
   },
   {
-    path: "/ILYTAT-Study",
-    name: "markdown-files",
-    component: NoteView,
+    path: "/ILYTAT-Blog",
+    name: "ILYTATBlog",
+    component: BlogView,
     meta: {
       title: `${appName} -- Thoughts`,
       style: { color: routeColor },
       hideInNav: false,
+    },
+  },
+  {
+    path: "/ILYTAT-Services",
+    name: "ILYTATServices",
+    component: ServicesView,
+    meta: {
+      title: `${appName} -- Services`,
+      style: { color: routeColor },
+      hideInNav: false,
+    },
+  },
+  {
+    path: "/ILYTAT-Projects",
+    name: "ILYTATProjects",
+    component: ProjectsView,
+    meta: {
+      title: `${appName} -- Projects`,
+      style: { color: routeColor },
+      hideInNav: false,
+    },
+  },
+  {
+    path: "/ILYTAT-Resume",
+    name: "ILYTATResume",
+    component: ResumeView,
+    meta: {
+      title: `${appName} -- Resume`,
+      style: { color: routeColor },
+      hideInNav: false,
+    },
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "not-found",
+    component: VueError,
+    meta: {
+      title: `${appName} -- 404`,
+      style: { color: routeColor },
+      hideInNav: true,
     },
   },
 ];

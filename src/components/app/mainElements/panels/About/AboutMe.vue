@@ -7,7 +7,7 @@
     <div class="about-me-content">
       <div class="about-me-image">
         <img
-          src="../../../../../assets/images/FacebookImageFamily.jpg"
+          src="../../../../../assets/images/personal/FacebookImageFamily.jpg"
           alt="Jj"
         />
       </div>
