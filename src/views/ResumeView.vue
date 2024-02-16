@@ -2,21 +2,18 @@
   <BaseView>
     <template #default>
       <goToButton buttonText="Go Home"></goToButton>
-      <h1>I'm hopeful that this webpage is helpful to you and your company.</h1>
-
       <div>
-        <h2>Resume</h2>
         <p>
-          I've included my resume here for your convenience. If you have any
-          questions, please feel free to reach out to me.
+          I've included my resume here for your convenience. You can view or
+          <a href="/resume/2023-06-27.pdf" download="ILYTAT-Resume.pdf"
+            >download</a
+          >
+          the file
         </p>
         <div class="centered boxed fit">
-          <VuePDF :pdf="pdf" :page="1" />
+          <VuePDF :pdf="pdf" />
+          <!-- <VuePDF :pdf="pdf" @click="openPDF" /> -->
         </div>
-        <!-- Download -->
-        <a href="/resume/2023-06-27.pdf" download="ILYTAT-Resume.pdf"
-          >Download</a
-        >
       </div>
     </template>
   </BaseView>
@@ -26,7 +23,6 @@
 import BaseView from "./BaseView.vue";
 import goToButton from "@/components/app/mainElements/buttons/GoToButton.vue";
 import { usePDF, VuePDF } from "@tato30/vue-pdf";
-// import resume from "";
 
 export default {
   name: "ResumeView",
@@ -41,17 +37,26 @@ export default {
     };
   },
   setup() {
-    const { pdf, pages, info } = usePDF("/resume/2023-06-27.pdf");
+    const { pdf } = usePDF("/resume/2023-06-27.pdf");
+    // const { pdf, pages, info } = usePDF("/resume/2023-06-27.pdf");
 
-    console.log(JSON.stringify(info));
-    console.log(JSON.stringify(pages));
+    // console.log(JSON.stringify(info));
+    // console.log(JSON.stringify(pages));
 
-    console.log(`Document has ${pages} pages`);
-    console.log(`Document info: ${info}`);
+    // console.log(`Document has ${JSON.stringify(pages)} pages`);
+    // console.log(`Document info: ${JSON.stringify(info)}`);
 
     return {
       pdf,
     };
+  },
+  methods: {
+    openPDF() {
+      if (!this.pdf) return;
+      const blob = new Blob([this.pdf], { type: "application/pdf" });
+      const url = URL.createObjectURL(blob);
+      window.open(url);
+    },
   },
 };
 </script>
