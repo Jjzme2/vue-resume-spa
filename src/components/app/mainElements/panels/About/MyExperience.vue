@@ -1,6 +1,6 @@
 <template>
-  <div class="language-experience">
-    <h1 class="component-header-text">
+  <div>
+    <h1 class="component-title">
       My Proficiency in Different Languages/Frameworks
     </h1>
     <div class="card-grid">
