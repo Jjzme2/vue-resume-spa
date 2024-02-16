@@ -4,13 +4,13 @@
       <goToButton buttonText="Go Home"></goToButton>
       <h1>I'm hopeful that this webpage is helpful to you and your company.</h1>
 
-      <div class="resume">
+      <div>
         <h2>Resume</h2>
         <p>
           I've included my resume here for your convenience. If you have any
           questions, please feel free to reach out to me.
         </p>
-        <div class="centered boxed">
+        <div class="centered boxed fit">
           <VuePDF :pdf="pdf" :page="1" />
         </div>
         <!-- Download -->

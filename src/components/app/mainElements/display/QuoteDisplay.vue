@@ -1,8 +1,8 @@
 <template>
-  <div class="quote-display">
-    <div class="quote">
-      <p>{{ randomQuote.quote }}</p>
-      <p class="author">
+  <div class="banner">
+    <div>
+      <p class="colored-text-primary">{{ randomQuote.quote }}</p>
+      <p class="mini-text">
         <a :href="randomQuote.source" target="_blank">{{
           randomQuote.author
         }}</a>

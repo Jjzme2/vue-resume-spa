@@ -2,7 +2,7 @@
   <BaseView>
     <template #default>
       <goToButton buttonText="Go Home"></goToButton>
-      <div class="description-area">
+      <div class="centered boxed pop med-text">
         <p>
           Given my appreciation for the voice we all have, I wanted to create a
           space where I could share my thoughts and experiences. To that end,

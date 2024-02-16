@@ -11,6 +11,7 @@ const routeColor = "#333333";
 const appName = "ILYTAT";
 
 const routes = [
+  // Local routes
   {
     path: "/",
     name: "home",
@@ -71,6 +72,7 @@ const routes = [
       hideInNav: false,
     },
   },
+  //   Catch all route
   {
     path: "/:pathMatch(.*)*",
     name: "not-found",

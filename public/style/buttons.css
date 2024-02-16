@@ -1,3 +1,22 @@
+.primary-button {
+	background-color: var(--primary-button-color);
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	color: var(--primary-button-text-color);
+	cursor: pointer;
+	font-size: 1rem;
+	margin: 1rem;
+	padding: 1rem;
+}
+
+.primary-button:hover {
+	background-color: var(--primary-button-hover-color);
+	color: var(--primary-button-hover-text-color);
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+
 .tab {
 	background-color: var(--primary-panel-color);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

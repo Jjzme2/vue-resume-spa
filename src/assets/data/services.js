@@ -15,6 +15,14 @@ const services = [
     cost: 25,
     rate: "Per hour",
   },
+  {
+    id: 0,
+    name: "Let's Talk",
+    description:
+      "I'm happy to discuss your project with you, and help you with any questions if I can.",
+    cost: 0,
+    rate: "Free",
+  },
 ];
 
 export default services;

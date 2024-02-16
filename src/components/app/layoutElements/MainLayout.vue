@@ -74,29 +74,3 @@ export default {
   },
 };
 </script>
-<style scoped>
-.main-layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.header {
-  background-color: var(--secondary-background-color);
-  padding: 1rem;
-  box-shadow: var(--primary-shadow);
-}
-
-.body {
-  background-color: var(--primary-background-color);
-  flex-grow: 1;
-  overflow-y: auto;
-  padding: 1rem;
-}
-
-.footer {
-  background-color: var(--secondary-background-color);
-  padding: 1rem;
-  box-shadow: var(--primary-shadow), 0 2px 10px rgba(0, 0, 0, 0.12);
-}
-</style>
