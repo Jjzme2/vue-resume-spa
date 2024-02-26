@@ -10,7 +10,16 @@
           curious, I hope some of my thoughts can help you in some way.
         </p>
       </div>
-      <directoryPanel :tabs="this.FileTabs"></directoryPanel>
+      <!-- {{ this.FileTabs ?? "No FileTabs" }} -->
+      <div v-if="this.FileTabs" class="centered boxed pop med-text">
+        <p>
+          <!-- {{ this.FileTabs }} -->
+          <directoryPanel :tabs="this.FileTabs"></directoryPanel>
+        </p>
+      </div>
+      <div v-else class="centered boxed pop med-text">
+        <p>No files found!</p>
+      </div>
     </template>
   </BaseView>
 </template>
@@ -19,7 +28,8 @@
 import BaseView from "./BaseView.vue";
 import goToButton from "@/components/app/mainElements/buttons/GoToButton.vue";
 import directoryPanel from "@/components/app/mainElements/panels/DirectoryPanel.vue";
-import MarkdownViewer from "@/components/app/mainElements/panels/Study/MarkdownWithSyntaxHighlighting.vue";
+
+import posts from "@/assets/markdown/blogPosts.js";
 
 export default {
   name: "BlogView",
@@ -31,20 +41,7 @@ export default {
   data() {
     return {
       developerTaskID: "0d00847c-0c76-419d-a9d2-ef18f25bc269",
-      FileTabs: [
-        {
-          name: "Keep 'em Separated",
-          component: MarkdownViewer,
-          params: { fileName: "ImportanceOfSOC" },
-        },
-        {
-          name: "What is a Static website?",
-          component: MarkdownViewer,
-          params: { fileName: "WhatIsAStaticWebsite" },
-        },
-        // { name: "Contact Me", component: "ContactMe" },
-        // { name: "My Experience", component: "MyExperience" },
-      ],
+      FileTabs: posts,
     };
   },
 };
