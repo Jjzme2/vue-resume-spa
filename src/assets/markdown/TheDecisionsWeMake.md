@@ -39,6 +39,6 @@ As you ponder what your reasons might be, consider the techniques below:
 
 If it is true that I'm not alone in this, please reach out. I'd love to hear your thoughts and experiences. I'm always open to learning from others, and I believe that sharing our experiences can help us all grow.
 
-# The Decisions We Make
+## The Decisions We Make
 
 At the end of everything, I think the most important things, are those decisions we make. I know that I have definitely made the wrong decisions at times and I hope to continue to learn from them. I think a simple decision I can make though, in most cases, is the final one: to act or not act. My action is to wish that you, the reader, will have a great day and make only the decisions that will benefit you most, even if it might mean a little discomfort in the short term.
