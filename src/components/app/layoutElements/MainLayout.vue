@@ -21,7 +21,7 @@
         <ul>
           <li>Powered by Vue.js</li>
           <li>Hosted By Github Pages.</li>
-          <li>Domain provided by squarespace.</li>
+          <li>Domain provided by Squarespace.</li>
           <li>Application developed by Jj Zettler (ILYTAT)</li>
         </ul>
       </div>

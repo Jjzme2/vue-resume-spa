@@ -18,6 +18,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
+	margin: auto;
 }
 
 .colored-text-primary {
@@ -34,6 +36,14 @@
 
 .pop {
 	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.flatten {
+	box-shadow: none;
+}
+
+.inset {
+	box-shadow: inset 3px 3px 10px rgba(251, 255, 0, 0.733);
 }
 
 /* Text Types */
@@ -76,6 +86,22 @@
 	padding: 1rem;
 }
 
+/* Widths */
+
+.full-w {
+	width: 100%;
+}
+
+.half-w {
+	width: 50%;
+}
+
+.third-w {
+	width: 33%;
+}
+
+
+/* Media Queries */
 
 @media screen and (max-width: 768px) {
 	.common-table {
