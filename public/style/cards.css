@@ -61,6 +61,34 @@
   margin-top: 2rem;
 }
 
+.interest-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.interest-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.interest-name {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.interest-level,
+.interest-appeal {
+  font-size: 1em;
+  color: #666;
+}
+
 @media screen and (max-width: 768px) {
   .card-grid {
     grid-template-columns: 1fr;

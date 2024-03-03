@@ -17,6 +17,7 @@ import goTobutton from "@/components/app/mainElements/buttons/GoToButton.vue";
 import AboutMe from "@/components/app/mainElements/panels/About/AboutMe.vue";
 import ContactMe from "@/components/app/mainElements/panels/About/ContactMe.vue";
 import MyExperience from "@/components/app/mainElements/panels/About/MyExperience.vue";
+import Interests from "@/components/app/mainElements/panels/About/MyInterests.vue";
 
 export default {
   name: "WhoIsView",
@@ -29,6 +30,7 @@ export default {
     return {
       aboutTabs: [
         { name: "Experience", component: MyExperience },
+        { name: "Interests", component: Interests },
         { name: "About Me", component: AboutMe },
         { name: "Contact Me", component: ContactMe },
       ],

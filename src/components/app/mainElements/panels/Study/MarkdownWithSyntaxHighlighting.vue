@@ -6,9 +6,14 @@
         v-html="renderedMarkdown"
         @click="openFile"
       ></div>
+      <div class="view-post-button">
+        <button @click="openFile">View Post</button>
+      </div>
       <button class="primary-button" @click="downloadAsHtml">Download</button>
     </div>
-    <div v-else>No Files found</div>
+    <div v-else>
+      <p>There was a problem accessing this file.</p>
+    </div>
   </div>
 </template>
 
@@ -91,3 +96,22 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@media (max-width: 768px) {
+  .markdown-content {
+    display: none;
+  }
+  .view-post-button {
+    display: block;
+  }
+}
+@media (min-width: 769px) {
+  .markdown-content {
+    display: block;
+  }
+  .view-post-button {
+    display: none;
+  }
+}
+</style>

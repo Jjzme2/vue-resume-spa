@@ -2,8 +2,9 @@
   <BaseView>
     <template #default>
       <alertBox
-        message="The developer of this site is currently working to expand his knowledge and experience. This might cause delays in blog posts and other updates. Thank you for your patience."
-        type="info"
+        v-if="developerMessage"
+        :message="developerMessage.message"
+        :type="developerMessage.type"
         :displayOnOpen="true"
       ></alertBox>
 
@@ -44,6 +45,11 @@ export default {
   data() {
     return {
       developerTaskID: "d069a0a3-c0d3-4882-8645-271014f2ff34",
+      //   developerMessage: {
+      //     message:
+      //       "The developer of this site is currently working to expand his knowledge and experience. This might cause delays in blog posts and other updates. Thank you for your patience.",
+      //     type: "info",
+      //   },
     };
   },
   computed: {
