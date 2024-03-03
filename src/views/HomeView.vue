@@ -1,6 +1,13 @@
 <template>
   <BaseView>
     <template #default>
+      <alertBox
+        v-if="developerMessage"
+        :message="developerMessage.message"
+        :type="developerMessage.type"
+        :displayOnOpen="true"
+      ></alertBox>
+
       <greetingText :text="holidayMessage" fontSize="4.2em"></greetingText>
       <div class="me-area">
         <img src="../assets/images/personal/me.jpg" alt="Me" />
@@ -26,16 +33,23 @@
 import BaseView from "./BaseView.vue";
 import greetingText from "@/components/app/mainElements/text/GreetingText.vue";
 import { usHolidays } from "@/assets/data/holidays.js";
+import alertBox from "@/components/app/mainElements/alerts/alertBox.vue";
 
 export default {
   name: "HomeView",
   components: {
     BaseView,
     greetingText,
+    alertBox,
   },
   data() {
     return {
       developerTaskID: "d069a0a3-c0d3-4882-8645-271014f2ff34",
+      //   developerMessage: {
+      //     message:
+      //       "The developer of this site is currently working to expand his knowledge and experience. This might cause delays in blog posts and other updates. Thank you for your patience.",
+      //     type: "info",
+      //   },
     };
   },
   computed: {

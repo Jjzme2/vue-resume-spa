@@ -3,9 +3,7 @@ import { createStore } from "vuex";
 
 import appState from "./modules/appState";
 import markdowns from "./modules/markdowns";
-// import bookmarks from "./modules/bookmarks";
-// import journals from "./modules/journals";
-// import quotes from "./modules/quotes";
+import interests from "./modules/interests";
 
 const store = createStore({
   state: {},
@@ -15,9 +13,7 @@ const store = createStore({
   modules: {
     appState,
     markdowns,
-    // bookmarks,
-    // journals,
-    // quotes,
+    interests,
   },
 });
 
