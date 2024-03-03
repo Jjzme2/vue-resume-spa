@@ -1,3 +1,10 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
 .coding-language-card {
   display: flex;
   flex-direction: column;
@@ -54,12 +61,6 @@
   scrollbar-color: var(--color-primary) var(--primary-panel-color);
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
 
 .interest-card {
   display: flex;
