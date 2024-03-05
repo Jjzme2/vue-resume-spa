@@ -63,21 +63,9 @@
 
 /* Contact display */
 
-.contact-form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
-	height: 100%;
-	padding: 1rem 3rem;
-	background-color: var(--color-primary);
-	border-radius: 1rem;
-	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-	transition: transform 0.2s;
-	width: 90%;
-}
 
 .contact-card {
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,10 +96,11 @@
 
 .contact-display input,
 .contact-display textarea {
-  margin: 10px;
-  padding: 10px;
   border-radius: 5px;
   border: 1px solid #ddd; /* Use lighter border color */
+  font: --primary-font-family 1rem;
+  margin: 10px;
+  padding: 10px;
   width: 75%;
 }
 
