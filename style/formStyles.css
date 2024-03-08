@@ -1,0 +1,30 @@
+.form-container {
+	border-radius: 5px;
+	margin: 0 auto;
+	max-width: 500px;
+	padding: 1rem;
+	width: 60%;
+}
+
+.form-group {
+	margin: 1rem auto;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+.form-group input {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	display: block;
+	font-size: 1rem;
+	margin-top: 0.5rem;
+	padding: 0.5rem;
+	width: 100%;
+}
+
+.form-group input:focus {
+	outline: none;
+}
