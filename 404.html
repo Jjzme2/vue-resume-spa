@@ -11,3 +11,10 @@
 		<p>For now, <a href="/">let's head back home</a></p>
 	</div>
 </div>
+
+<script>
+    const path = window.location.pathname.slice(1);
+    localStorage.setItem('path', path);
+    window.location.href='../';
+	console.log("Attempting to redirect to: " + path);
+</script>
