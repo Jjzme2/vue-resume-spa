@@ -60,39 +60,53 @@
 	margin: 0 3rem;
     max-width: 40%;
 }
-.contact-display {
+
+/* Contact display */
+
+
+.contact-card {
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 20px;
-  border: 1px solid #000;
-  border-radius: 10px;
-  background-color: #f0f0f0;
-  box-shadow: 0 0 10px #000;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1rem 3rem;
+  background-color: var(--color-primary);
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
   width: 50%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.contact-display input {
+
+.contact-display {
+  align-items: center;
+  background-color: var(--color-primary);
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2rem auto;
+  padding: 1rem;
+  transition: transform 0.2s;
+  width: 100%;
+}
+
+.contact-display input,
+.contact-display textarea {
+  border-radius: 5px;
+  border: 1px solid #ddd; /* Use lighter border color */
+  font: --primary-font-family 1rem;
   margin: 10px;
   padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #000;
-  width: 50%;
+  width: 75%;
 }
 
 .contact-display textarea {
-  margin: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #000;
   max-height: 20vh;
   max-width: 95%;
-  width: 50%;
 }
 
 .social-links {

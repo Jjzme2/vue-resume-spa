@@ -1,6 +1,6 @@
 <template>
   <!-- Basic Email form -->
-  <div class="contact-form">
+  <div>
     <form @submit.prevent="sendEmail">
       <div class="contact-display">
         <label for="name">Your Name:</label>
@@ -14,6 +14,8 @@
           v-model="message"
           id="message"
           name="message"
+          rows="8"
+          cols="50"
           required
         ></textarea>
         <input type="submit" value="Submit" />

@@ -10,7 +10,7 @@
         />
       </div>
     </div>
-    <div v-else>"No interests available. Please try again later."</div>
+    <div v-else>Loading...</div>
   </div>
 </template>
 

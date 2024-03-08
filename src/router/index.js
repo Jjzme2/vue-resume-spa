@@ -11,6 +11,10 @@ const routeColor = "#333333";
 const appName = "ILYTAT";
 
 const routes = [
+  {
+    path: "/vue-resume-spa/:pathMatch(.*)*",
+    redirect: "/ILYTAT-Resume",
+  },
   // Local routes
   {
     path: "/",
