@@ -6,16 +6,27 @@
         v-html="renderedMarkdown"
         @click="openFile"
       ></div>
-      <button class="primary-button" @click="downloadAsHtml">Download</button>
+      <div class="view-post-button">
+        <button class="primary-button" @click="openFile">View Post</button>
+      </div>
+      <button class="secondary-button" @click="downloadAsHtml">Download</button>
+      <ContactCard message="Let's talk about this post!"></ContactCard>
     </div>
-    <div v-else>No Files found</div>
+    <div v-else>
+      <p>There was a problem accessing this file.</p>
+    </div>
   </div>
 </template>
 
 <script>
 import MarkdownIt from "markdown-it";
+import ContactCard from "@/components/app/mainElements/cards/ContactCard.vue";
 
 export default {
+  name: "MarkdownWithSyntaxHighlighting",
+  components: {
+    ContactCard,
+  },
   props: {
     fileName: {
       type: String,
@@ -77,7 +88,7 @@ export default {
 	         <button class="primary-button" onclick="window.close()">Close</button>
 	       </div>
 
-		   <div class="centered boxed shadow-emerald third-w">
+		   <div class="centered boxed shadow-emerald width-third">
 		     <p class="centered large-text colored-text-primary">ILYTAT</p>
 			 </div>
 
@@ -91,3 +102,22 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@media (max-width: 768px) {
+  .markdown-content {
+    display: none;
+  }
+  .view-post-button {
+    display: block;
+  }
+}
+@media (min-width: 769px) {
+  .markdown-content {
+    display: block;
+  }
+  .view-post-button {
+    display: none;
+  }
+}
+</style>

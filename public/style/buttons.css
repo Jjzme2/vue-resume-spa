@@ -3,7 +3,7 @@
 	border: none;
 	border-radius: 5px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	color: var(--primary-button-text-color);
+	color: var(--button-text-color);
 	cursor: pointer;
 	font-size: 1rem;
 	margin: 1rem;
@@ -16,7 +16,26 @@
 	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
+.secondary-button {
+	background-color: var(--secondary-button-color);
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	color: var(--button-text-color);
+	cursor: pointer;
+	font-size: 1rem;
+	margin: 1rem;
+	padding: 1rem;
+}
 
+.secondary-button:hover {
+	background-color: var(--secondary-button-hover-color);
+	color: var(--secondary-button-hover-text-color);
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Consider moving to a more appropriate place. */
 .tab {
 	background-color: var(--primary-panel-color);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

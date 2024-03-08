@@ -1,9 +1,36 @@
+#app {
+  font-family: --primary-font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: --secondary-font-family;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+	font-family: --primary-font-family;
+}
+
 .banner {
 	background-image: url("/public/images/app/BannerImage.jpg");
 	background-size: auto 500%;
 	border-radius: 5px;
 	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 	padding: 3rem;
+}
+
+.background-primary {
+	background-color: var(--primary-background-color);
+}
+
+.background-secondary {
+	background-color: var(--secondary-background-color);
 }
 
 .boxed {
@@ -30,8 +57,20 @@
 	color: var(--secondary-text-color);
 }
 
-.colored-text-tertiary {
-	color: var(--tertiary-text-color);
+.flex {
+	display: flex;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.height-min-50 {
+	min-height: 50vh;
+}
+
+.height-min-100 {
+	min-height: 100vh;
 }
 
 .pop {
@@ -45,6 +84,8 @@
 .inset {
 	box-shadow: inset 3px 3px 10px rgba(251, 255, 0, 0.733);
 }
+
+
 
 /* Text Types */
 
@@ -88,15 +129,15 @@
 
 /* Widths */
 
-.full-w {
+.width-full {
 	width: 100%;
 }
 
-.half-w {
+.width-half {
 	width: 50%;
 }
 
-.third-w {
+.width-t {
 	width: 33%;
 }
 

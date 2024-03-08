@@ -2,7 +2,11 @@
   <BaseView>
     <template #default>
       <goToButton buttonText="Go Home"></goToButton>
-      <h1>Here are some a la carte services I offer.</h1>
+      <h1>
+        As a growing developer, I am very interested in connecting in a
+        professional scope. Please feel free to reach out if any of the items
+        below are appealing to you.
+      </h1>
 
       <div>
         <table class="common-table">

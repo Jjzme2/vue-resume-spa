@@ -3,10 +3,12 @@ const appState = {
   state: {
     loading: false,
     error: null,
+    message: null,
   },
   getters: {
     getLoading: (state) => state.loading,
     getError: (state) => state.error,
+    getMessage: (state) => state.message,
   },
   mutations: {
     setLoading: (state, data) => {
@@ -15,6 +17,9 @@ const appState = {
     setError: (state, data) => {
       state.error = data;
     },
+    setMessage: (state, data) => {
+      state.message = data;
+    },
   },
   actions: {
     setLoading: ({ commit }, data) => {
@@ -22,6 +27,9 @@ const appState = {
     },
     setError: ({ commit }, data) => {
       commit("setError", data);
+    },
+    setMessage: ({ commit }, data) => {
+      commit("setMessage", data);
     },
   },
   modules: {},
