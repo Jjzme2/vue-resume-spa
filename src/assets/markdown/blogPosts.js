@@ -6,6 +6,11 @@ const posts = [
     component: MarkdownViewer,
     params: { fileName: "TheDecisionsWeMake" },
   },
+  {
+    name: "The Comfort in Discomfort",
+    component: MarkdownViewer,
+    params: { fileName: "TheComfortInDiscomfort" },
+  },
 ];
 
 export default posts;

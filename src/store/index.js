@@ -4,6 +4,7 @@ import { createStore } from "vuex";
 import appState from "./modules/appState";
 import markdowns from "./modules/markdowns";
 import interests from "./modules/interests";
+import subscribers from "./modules/subscribers";
 
 const store = createStore({
   state: {},
@@ -14,6 +15,7 @@ const store = createStore({
     appState,
     markdowns,
     interests,
+    subscribers,
   },
 });
 

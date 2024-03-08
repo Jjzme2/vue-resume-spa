@@ -255,6 +255,13 @@ const quotes = [
     quote: "The best way to predict the future is to create it.",
     source: "https://www.brainyquote.com/quotes/peter_drucker_101472",
   },
+  {
+    author: "Rafiki",
+    quote:
+      "Oh yes, the past can hurt. But from the way I see it, you can either run from it, or learn from it.",
+    source:
+      "https://news.disney.com/the-most-important-quotes-from-the-lion-king-according-to-you#:~Oh%20yes:~:text=Oh%20yes%2C%20the%20past%20can%20hurt.%20But%20from%20the%20way%20I%20see%20it%2C%20you%20can%20either%20run%20from%20it%2C%20or%20learn%20from%20it.%22%20%2DRafiki",
+  },
 ];
 
 export default quotes;
