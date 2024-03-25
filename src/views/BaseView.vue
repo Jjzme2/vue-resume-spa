@@ -18,6 +18,26 @@ export default {
   components: {
     mainLayout,
   },
+  //   Redirect Hack.
+  //   beforeMount() {
+  //     if (localStorage.getItem("path").length > 0) {
+  //       this.$router.options.routes.forEach((route) => {
+  //         if (route.path == localStorage.getItem("path")) {
+  //           console.log(
+  //             "Path:" + localStorage.getItem("path") + " Route:" + route.path
+  //           );
+
+  //           this.$router.push(route.name);
+  //           localStorage.removeItem("path");
+  //           return;
+  //         } else {
+  //           this.$router.push("404");
+  //           localStorage.removeItem("path");
+  //           return;
+  //         }
+  //       });
+  //     }
+  //   },
   props: {
     includeHeader: {
       type: Boolean,
