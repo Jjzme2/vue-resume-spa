@@ -49,24 +49,9 @@ export default {
   data() {
     return {
       developerTaskID: "d069a0a3-c0d3-4882-8645-271014f2ff34",
-      developerKeySkills: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Vue.js",
-        "ColdFusion",
-        "SQL",
-        "Git",
-        "GitHub",
-        "VS Code",
-        "Bootstrap",
-      ],
+      developerMessage: null,
       developerDescription:
-        "First and foremost, I am a family man. I am a husband and father. So you may hear a lot of dad jokes, and at times any lessons I can share; I love quotes. Second I am a hard worker, and I am always looking to improve my skills, and determined to do my best. Third, I am a developer, my professional experience has been in web development, but I love coding and learning new things, and I'm eager to combine my second and third focuses, my entrepreneurial spirit is itching for that third spot.",
-      developerDescriptionAlt:
-        "I'm a passionate web developer with 1 year of experience in web development. I'm proficient in " +
-        this.developerKeySkills.join(" ") +
-        " and constantly strive to stay ahead of the curve by learning new technologies. As a problem solver with a strong work ethic, I thrive in collaborative environments and am eager to contribute to innovative projects.",
+        "I am a Full Stack Developer with a passion for creating and building web applications. I have experience with a variety of technologies and languages, including JavaScript, ColdFusion, SQL, and C#. I am always looking for new opportunities to learn and grow as a developer.",
     };
   },
   computed: {
