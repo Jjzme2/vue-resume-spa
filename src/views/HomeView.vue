@@ -49,13 +49,24 @@ export default {
   data() {
     return {
       developerTaskID: "d069a0a3-c0d3-4882-8645-271014f2ff34",
+      developerKeySkills: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Vue.js",
+        "ColdFusion",
+        "SQL",
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Bootstrap",
+      ],
       developerDescription:
-        "Hi, I'm Jj. I also often go by Jjzme2, or less so, but in some professional scope, ILYTAT. I am a software developer, who is strongly committed to the idea of creating a better world through technology. I think everyone has a story to tell, and I want to help them tell it.",
-      //   developerMessage: {
-      //     message:
-      //       "The developer of this site is currently working to expand his knowledge and experience. This might cause delays in blog posts and other updates. Thank you for your patience.",
-      //     type: "info",
-      //   },
+        "First and foremost, I am a family man. I am a husband and father. So you may hear a lot of dad jokes, and at times any lessons I can share; I love quotes. Second I am a hard worker, and I am always looking to improve my skills, and determined to do my best. Third, I am a developer, my professional experience has been in web development, but I love coding and learning new things, and I'm eager to combine my second and third focuses, my entrepreneurial spirit is itching for that third spot.",
+      developerDescriptionAlt:
+        "I'm a passionate web developer with 1 year of experience in web development. I'm proficient in " +
+        this.developerKeySkills.join(" ") +
+        " and constantly strive to stay ahead of the curve by learning new technologies. As a problem solver with a strong work ethic, I thrive in collaborative environments and am eager to contribute to innovative projects.",
     };
   },
   computed: {
