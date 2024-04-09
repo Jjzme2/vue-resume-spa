@@ -1,8 +1,7 @@
 /* Use media queries to adjust the layout and style of your elements based on the screen size and orientation of the device */
 @media (max-width: 768px) {
   .footer {
-    grid-template-columns: 1fr; /* One column for smaller screens */
-    flex-wrap: wrap; /* Wrap the footer items into multiple rows */
+    flex-wrap: nowrap; /* Wrap the footer items into multiple rows */
   }
 
   .main-content {
@@ -25,13 +24,14 @@
   padding: 1rem;
 }
 
-.footer {
+footer {
+  align-items: center;
   background-color: var(--secondary-background-color);
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  display: flex;
+  justify-content: center;
   margin-bottom: 0;
-  padding: 20px;
-  padding-bottom: 0;
+  margin: .5rem;
+  padding: .5rem .8rem;
 }
 
 .footer a {
@@ -45,27 +45,17 @@
   transition: color 0.3s ease-in-out; /* Smoothly change the color */
 }
 
-.footer-center {
-  align-items: baseline;
-  font-weight: bold;
+
+.footer-element {
+  align-items: center;
+  display: flex;
+  font-size: 0.9rem;
+  height: 5rem;
+  justify-content: center;
+  margin: .5rem auto;
+  padding: .5rem;
 }
 
-.footer-left {
-  align-items: flex-start;
-  color: var(--primary-text-color);
-  font-size: 8px;
-}
-
-.footer-right {
-  align-items: flex-end;
-  color: var(--primary-text-color);
-  font-size: 8px;
-}
-
-.footer-right li {
-  list-style-type: none;
-  text-align: right;
-}
 
 .header {
   background-color: var(--secondary-background-color);
