@@ -9,21 +9,16 @@
     </main>
 
     <footer class="footer" v-if="$slots.footer">
-      <div class="footer-left">
+      <div class="footer-element">
         <socials :links="socials"></socials>
       </div>
 
-      <div class="footer-center">
-        <p>&copy; {{ yearTag }}</p>
+      <div class="footer-element">
+        <strong>&copy; {{ yearTag }}</strong>
       </div>
 
-      <div class="footer-right">
-        <ul>
-          <li>Powered by Vue.js</li>
-          <li>Hosted By Github Pages.</li>
-          <li>Domain provided by Squarespace.</li>
-          <li>Application developed by Jj Zettler (ILYTAT)</li>
-        </ul>
+      <div class="footer-element">
+        <p>Application developed by Jj Zettler (ILYTAT)</p>
       </div>
     </footer>
   </div>

@@ -3,28 +3,18 @@
     <template #default>
       <goToButton buttonText="Go Home"></goToButton>
       <h1>
-        As a growing developer, I am very interested in connecting in a
-        professional scope. Please feel free to reach out if any of the items
-        below are appealing to you.
+        I really enjoy coding. If you are interested in talking more about a
+        project, please don't hesitate to reach out! I would love to help you
+        with your next project.
       </h1>
 
       <div>
         <table class="common-table">
           <tr>
-            <th>
-              <p>Cost</p>
-              <sub>All prices are in USD</sub>
-            </th>
-            <th>Rate</th>
             <th>Service</th>
             <th>Description</th>
           </tr>
           <tr v-for="service in services" :key="service.id">
-            <td>
-              <p>${{ service.cost }}</p>
-            </td>
-            <td>{{ service.rate }}</td>
-
             <td>{{ service.name }}</td>
             <td>{{ service.description }}</td>
           </tr>

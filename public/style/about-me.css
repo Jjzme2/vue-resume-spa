@@ -110,19 +110,18 @@
 }
 
 .social-links {
-  display: flex; /* Changed to flexbox for more responsive layout */
-  justify-content: space-between; /* Evenly distribute icons */
-  padding: 2em; /* No padding around icons */
-  margin:  1vh auto; /* No margin around icons */
-  width: 50%; /* Set a standard width for icons */
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 1rem;
+  width: 50%;
 }
 
 .social-links a {
   align-items: center;
-  color: inherit; /* Inherit font color from parent */
   display: flex;
-  padding: .5em; /* No padding around icons */
   text-decoration: none;
+  width: 3em;
 }
 
 .social-links a img {
