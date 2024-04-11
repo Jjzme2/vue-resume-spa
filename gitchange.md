@@ -85,3 +85,32 @@ Notes:
 - The footer should now be cleaner and more concise.
 - The footer should now be more visually appealing.
 - The Services section should now be more concise and easier to read.
+
+## GitChange 3
+
+Brief Description: Added a few new components that should later be slotted into a video player component.
+  - YoutubeVideo.vue
+  - InternalVideo.vue
+- Added a new Javascript Export: vocabulary.js. This should be used to fetch the definition of a word so we can display it later when the user hoveres over the word.
+- Added a new `lessons` folder in the `assets/markdown` directory. This will be used to store all the markdown files for the lessons.
+  - Created a _LessonPlan.md file to get me started with creating the lessons. 
+  - Created a TopThree.md file to get me started talking about `HTML`, `CSS`, and `JavaScript`.
+
+Date: 04/11/2024
+
+Changes:
+
+- Added YoutubeVideo.vue
+- Added InternalVideo.vue
+- Added vocabulary.js
+- Added lessons folder in assets/markdown
+  - Added _LessonPlan.md
+  - Added TopThree.md
+
+Notes:
+
+- The YoutubeVideo.vue component will be used to display Youtube videos.
+- The InternalVideo.vue component will be used to display videos that are stored locally.
+- The vocabulary.js file will be used to fetch the definition of a word.
+- The lessons folder will be used to store all the markdown files for the lessons.
+- The _LessonPlan.md file will be used to get me started with creating the lessons.
