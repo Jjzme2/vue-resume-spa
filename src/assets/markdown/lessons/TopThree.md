@@ -53,4 +53,37 @@ Attributes are extra information that you can give to an element. Different elem
 
 ### CSS
 
-CSS is the style of a webpage.
+CSS is the style of a webpage. It is how we define how each different element, or group of elements, should look. For instance, if we wanted to have the color of our text be white on a black background, and maybe give it a slight shadow, we would write CSS that looks like this.
+
+```css
+body {
+  background-color: black;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+```
+
+In this example, we are telling the browser that the background color of the body should be black, the text color should be white, and the text should have a slight shadow. The `1px 1px 1px black` is the shadow. The first two `1px` values are the x and y offsets of the shadow. The third `1px` value is the blur radius of the shadow. The `black` value is the color of the shadow.
+
+#### What are selectors?
+
+Selectors are a way to target elements on a webpage. There are many different types of selectors. Some of the most common are:
+
+- Tag Selectors
+- Class Selectors
+- ID Selectors
+- Attribute Selectors
+- Pseudo-Selectors
+- Combinators
+- Grouping Selectors
+
+|---|---|---|
+|Selector|Description|Example|
+|Tag Selectors|Target elements by their tag name|`h1`|
+|Class Selectors|Target elements by their class|`.container`|
+|ID Selectors|Target elements by their ID|`#header`|
+|Attribute Selectors|Target elements by their attributes|`[href]`|
+|Pseudo-Selectors|Target elements based on their state|`a:hover`|
+|Combinators|Target elements based on their relationship to other elements|`div p`|
+|Grouping Selectors|Target multiple elements at once|`h1, h2, h3`|
+|---|---|---|

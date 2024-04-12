@@ -114,3 +114,13 @@ Notes:
 - The vocabulary.js file will be used to fetch the definition of a word.
 - The lessons folder will be used to store all the markdown files for the lessons.
 - The _LessonPlan.md file will be used to get me started with creating the lessons.
+
+## GitChange 4
+
+Brief Description: Minor changes before moving to new branch added a little more content to the TopThree.md file.
+
+Date: 04/12/2024
+
+Changes:
+
+- Added more CSS content to the TopThree.md file.

@@ -69,7 +69,7 @@ export default {
     onPause() {
       const payload = {
         time: this.$refs.video.currentTime,
-        src: this.videoUrl
+        src: this.videoUrl,
       };
       this.$emit("pause", payload);
     },
