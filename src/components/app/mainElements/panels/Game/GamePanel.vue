@@ -4,7 +4,6 @@
       <h1>{{ game.name }}</h1>
       <p>{{ game.description }}</p>
     </div>
-
   </div>
 </template>
 
@@ -12,13 +11,10 @@
 export default {
   name: "GamePanel",
   props: {
-    gameName {
+    gameName: {
       type: String,
       required: true,
-      validator: (value) => {
-        return value.length > 0;
-      },
-    }
+    },
   },
 };
 </script>
