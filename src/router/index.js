@@ -1,10 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import WhoIsILYTAT from "../views/WhoIsILYTAT.vue";
-import BlogView from "../views/BlogView.vue";
-import ServicesView from "../views/ServicesView.vue";
-import ProjectsView from "../views/ProjectsView.vue";
-import ResumeView from "../views/ResumeView.vue";
+import WOIView from "../views/WarriorsView.vue";
 import VueError from "../views/VueError.vue";
 
 const routeColor = "#333333";
@@ -27,51 +23,11 @@ const routes = [
     },
   },
   {
-    path: "/Who-Is-ILYTAT",
-    name: "WhoIsILYTAT",
-    component: WhoIsILYTAT,
+    path: "/Warriors_Of_ILYTAT",
+    name: "Warriors",
+    component: WOIView,
     meta: {
-      title: `${appName} -- About`,
-      style: { color: routeColor },
-      hideInNav: false,
-    },
-  },
-  {
-    path: "/ILYTAT-Blog",
-    name: "ILYTATBlog",
-    component: BlogView,
-    meta: {
-      title: `${appName} -- Thoughts`,
-      style: { color: routeColor },
-      hideInNav: false,
-    },
-  },
-  {
-    path: "/ILYTAT-Services",
-    name: "ILYTATServices",
-    component: ServicesView,
-    meta: {
-      title: `${appName} -- Services`,
-      style: { color: routeColor },
-      hideInNav: false,
-    },
-  },
-  {
-    path: "/ILYTAT-Projects",
-    name: "ILYTATProjects",
-    component: ProjectsView,
-    meta: {
-      title: `${appName} -- Projects`,
-      style: { color: routeColor },
-      hideInNav: false,
-    },
-  },
-  {
-    path: "/ILYTAT-Resume",
-    name: "ILYTATResume",
-    component: ResumeView,
-    meta: {
-      title: `${appName} -- Resume`,
+      title: `${appName} -- Warriors_Of_ILYTAT`,
       style: { color: routeColor },
       hideInNav: false,
     },

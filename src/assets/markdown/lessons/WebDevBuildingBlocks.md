@@ -77,13 +77,12 @@ Selectors are a way to target elements on a webpage. There are many different ty
 - Combinators
 - Grouping Selectors
 
-|---|---|---|
-|Selector|Description|Example|
-|Tag Selectors|Target elements by their tag name|`h1`|
-|Class Selectors|Target elements by their class|`.container`|
-|ID Selectors|Target elements by their ID|`#header`|
-|Attribute Selectors|Target elements by their attributes|`[href]`|
-|Pseudo-Selectors|Target elements based on their state|`a:hover`|
-|Combinators|Target elements based on their relationship to other elements|`div p`|
-|Grouping Selectors|Target multiple elements at once|`h1, h2, h3`|
-|---|---|---|
+| Selector           | Description                                      | Example     |
+| ------------------ | ------------------------------------------------ | ----------- |
+| Tag Selectors      | Target elements by their tag name                | `h1`        |
+| Class Selectors    | Target elements by their class                   | `.container` |
+| ID Selectors       | Target elements by their ID                      | `#header`   |
+| Attribute Selectors| Target elements by their attributes              | `[href]`    |
+| Pseudo-Selectors   | Target elements based on their state             | `a:hover`   |
+| Combinators        | Target elements based on their relationship to other elements | `div p` |
+| Grouping Selectors | Target multiple elements at once                  | `h1, h2, h3`|

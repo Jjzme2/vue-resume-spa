@@ -8,9 +8,26 @@ import {
   setDoc,
 } from "firebase/firestore";
 
+const collections = [
+  { name: "card_types" },
+  { name: "cards" },
+  { name: "users" },
+  { name: "decks" },
+  { name: "games" },
+];
+
 export default {
   async getDocuments(collectionName, showInConsole = false) {
     // const snapshot = await db.collection(collectionName).get();
+    if (!collections.find((c) => c.name === collectionName)) {
+      console.error(
+        `Collection ${collectionName} not found in the database. Please try one of the following: ${collections
+          .map((c) => c.name)
+          .join(", ")}`
+      );
+      return;
+    }
+
     try {
       const snapshot = await getDocs(collection(db, collectionName));
 
@@ -20,9 +37,10 @@ export default {
           console.log(doc.id, " => ", doc.data());
         });
       }
+
       return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
     } catch (error) {
-      console.error(error);
+      console.error(error, collectionName);
     }
   },
 
