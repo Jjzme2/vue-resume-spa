@@ -1,0 +1,31 @@
+.social-links {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 1rem;
+  width: 50%;
+}
+
+.social-links a {
+  align-items: center;
+  display: flex;
+  text-decoration: none;
+  width: 3em;
+}
+
+.social-links a img {
+  width: 30px; /* Set a standard icon size */
+  max-height: 30px;
+  max-width: 100%; /* Ensure icons never exceed container size */
+}
+
+.social-links a:hover {
+  opacity: 0.8; /* Subtle hover effect */
+  border-radius: 50%; /* Round corners for icons */
+}
+
+.social-links li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}

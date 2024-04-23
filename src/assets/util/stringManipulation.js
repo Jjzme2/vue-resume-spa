@@ -28,15 +28,15 @@ class StringHelper {
     caseType = caseType.toLowerCase();
 
     const acceptedCaseTypes = [
-      "lower",
-      "upper",
-      "title",
-      "sentence",
-      "camel",
-      "pascal",
-      "kebab",
-      "snake",
-      "dot",
+      "lower", // lowercase
+      "upper", // UPPERCASE
+      "title", // Title Case
+      "sentence", // Sentence case
+      "camel", // camelCase
+      "pascal", // PascalCase
+      "kebab", // kebab-case
+      "snake", // snake_case
+      "dot", // dot.case
     ];
 
     if (!acceptedCaseTypes.includes(caseType)) {

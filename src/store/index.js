@@ -2,6 +2,7 @@ import { createStore } from "vuex";
 // Below, you will import the modules you created in the store folder.
 
 import appState from "./modules/appState";
+import games from "./modules/games";
 
 const store = createStore({
   state: {},
@@ -10,6 +11,7 @@ const store = createStore({
   actions: {},
   modules: {
     appState,
+    games,
   },
 });
 

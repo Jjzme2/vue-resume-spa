@@ -8,13 +8,7 @@ import {
   setDoc,
 } from "firebase/firestore";
 
-const collections = [
-  { name: "card_types" },
-  { name: "cards" },
-  { name: "users" },
-  { name: "decks" },
-  { name: "games" },
-];
+const collections = [{ name: "users" }, { name: "games" }];
 
 export default {
   async getDocuments(collectionName, showInConsole = false) {

@@ -2,14 +2,9 @@ import MarkdownViewer from "/src/components/app/mainElements/panels/Study/Markdo
 
 const posts = [
   {
-    name: "The Decisions we Make",
+    name: "READABLENAME",
     component: MarkdownViewer,
-    params: { fileName: "TheDecisionsWeMake" },
-  },
-  {
-    name: "The Comfort in Discomfort",
-    component: MarkdownViewer,
-    params: { fileName: "TheComfortInDiscomfort" },
+    params: { fileName: "ENTERFILENAME" },
   },
 ];
 

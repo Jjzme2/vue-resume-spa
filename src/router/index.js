@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
+
 import HomeView from "../views/HomeView.vue";
-import WOIView from "../views/WarriorsView.vue";
+import GameView from "../views/GameView.vue";
 import VueError from "../views/VueError.vue";
 
 const routeColor = "#333333";
@@ -8,39 +9,33 @@ const appName = "ILYTAT";
 
 const routes = [
   {
-    path: "/vue-resume-spa/:pathMatch(.*)*",
-    redirect: "/ILYTAT-Resume",
+    path: "/:pathMatch(.*)*",
+    name: "not-found",
+    component: VueError,
+    meta: {
+      title: `${appName} 🔥`,
+      style: { color: routeColor },
+      hideInNav: true,
+    },
   },
-  // Local routes
   {
     path: "/",
     name: "home",
     component: HomeView,
     meta: {
-      title: `${appName} -- Home`,
+      title: `${appName} 🏠`,
       style: { color: routeColor },
       hideInNav: false,
     },
   },
   {
-    path: "/Warriors_Of_ILYTAT",
-    name: "Warriors",
-    component: WOIView,
+    path: "/games",
+    name: "games",
+    component: GameView,
     meta: {
-      title: `${appName} -- Warriors_Of_ILYTAT`,
+      title: `${appName} 🎮`,
       style: { color: routeColor },
       hideInNav: false,
-    },
-  },
-  //   Catch all route
-  {
-    path: "/:pathMatch(.*)*",
-    name: "not-found",
-    component: VueError,
-    meta: {
-      title: `${appName} -- 404`,
-      style: { color: routeColor },
-      hideInNav: true,
     },
   },
 ];

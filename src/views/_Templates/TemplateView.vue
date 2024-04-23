@@ -1,22 +1,27 @@
 <template>
   <BaseView>
     <template #default>
-      <div>
-        <GamePanel gameName="Warriors"></GamePanel>
-      </div>
+      <!-- Add your code here  -->
     </template>
   </BaseView>
 </template>
 
 <script>
 import BaseView from "./BaseView.vue";
-import GamePanel from "@/components/app/mainElements/panels/Game/GamePanel.vue";
 
 export default {
-  name: "WarriorsView",
+  //   name: "NewView",
   components: {
     BaseView,
-    GamePanel,
+  },
+  data() {
+    return {};
   },
 };
 </script>
+
+<style scoped>
+h1 {
+  margin-bottom: 1rem;
+}
+</style>
