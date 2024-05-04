@@ -1,4 +1,4 @@
-import StringHelper from "./stringManipulation";
+import StringHelper from "./stringUtils/stringHelper";
 
 const theme = {
   log: {

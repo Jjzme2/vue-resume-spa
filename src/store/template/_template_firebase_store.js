@@ -9,7 +9,10 @@ const OBJECTNAME = {
   },
   getters: {
     getAll: (state) => {
-      if (!state.allItems) throw new Error("No data available in the store, please fetchAll first");
+      if (!state.allItems)
+        throw new Error(
+          "No data available in the store, please fetchAll first"
+        );
       return state.allItems;
     },
     getByField: (state) => (field, value) => {

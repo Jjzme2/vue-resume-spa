@@ -65,7 +65,7 @@ export default {
           if (newVal.name != "") {
             this.game = newVal;
             this.$loggerUtils.sendLog("Game Selected", newVal);
-            this.game.name = this.$stringUtils.convertStringToCase(
+            this.game.name = this.$stringConversion.convertStringToCase(
               this.game.name,
               "pascal"
             );
