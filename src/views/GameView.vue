@@ -1,17 +1,17 @@
 <template>
   <BaseView>
     <template #default>
-      <!-- Add your code here  -->
-      <ILYTATWindow :windowTitle="windowTitle" :allowClose="0">
+      <ILYTATWindow :windowTitle="windowTitle" :allowClose="false">
         <selectorTool
           :options="games"
-          :hasSubmit="1"
+          :hasSubmit="true"
           label="Game Selector"
           submitLabel="Confirm Selection"
           @submit="selectGame"
         ></selectorTool>
-        <GamePanel :gameName="gameName"></GamePanel
-      ></ILYTATWindow>
+        <div v-if="isLoadingComponent">Loading Game...</div>
+        <component v-else :is="gameComponent"></component>
+      </ILYTATWindow>
     </template>
   </BaseView>
 </template>
@@ -20,13 +20,11 @@
 import BaseView from "./BaseView.vue";
 import ILYTATWindow from "@/components/app/mainElements/panels/ILYTATWindow.vue";
 import selectorTool from "@/components/app/mainElements/tools/selectorTool.vue";
-import GamePanel from "@/components/app/mainElements/panels/Game/GamePanel.vue";
 
 export default {
   name: "GameView",
   components: {
     BaseView,
-    GamePanel,
     ILYTATWindow,
     selectorTool,
   },
@@ -40,8 +38,10 @@ export default {
       game: {
         name: "",
         id: "",
-        data_location: "",
+        config: "",
       },
+      isLoadingComponent: false,
+      gameComponent: null,
     };
   },
   computed: {
@@ -62,18 +62,32 @@ export default {
       immediate: true,
       handler(newVal) {
         if (newVal) {
-          this.gameName = this.$stringUtils.convertStringToCase(
-            newVal.name,
-            "pascal"
-          );
+          if (newVal.name != "") {
+            this.game = newVal;
+            this.$loggerUtils.sendLog("Game Selected", newVal);
+            this.game.name = this.$stringUtils.convertStringToCase(
+              this.game.name,
+              "pascal"
+            );
+            this.loadComponent(this.game.name);
+          }
         }
       },
     },
   },
   methods: {
     selectGame(payload) {
-      console.log("Payload: ", payload);
       this.game = payload;
+    },
+    async loadComponent(gameName) {
+      let config = await import(`/data/games/${gameName}/config.js`).catch(
+        (error) => {
+          console.error("Error loading component: ", error);
+        }
+      );
+      this.gameComponent = config.default.getComponent();
+      console.log("Game Component: ", this.gameComponent);
+      this.isLoadingComponent = false;
     },
   },
 };

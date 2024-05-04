@@ -1,6 +1,20 @@
 class TimeUtil {
-  static getCurrentTime() {
-    return new Date().getHours();
+  /**
+   * Get current time in a specified format, or the default format if none is provided.
+   * @param {string} format - The format to return the time in. Default is "HH:MM:SS".
+   * @returns {string} - The current time in the specified format.
+   */
+  static getCurrentTime(
+    locale = "en-US",
+    twelveHour = false,
+    timeZone = "UTC",
+    timeStyle = "medium"
+  ) {
+    return new Date().toLocaleTimeString(locale, {
+      hour12: twelveHour,
+      timeZone: timeZone,
+      timeStyle: timeStyle,
+    });
   }
 
   static getTimeOfDay(currentTime) {

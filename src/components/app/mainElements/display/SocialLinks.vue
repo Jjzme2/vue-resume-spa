@@ -14,11 +14,11 @@ export default {
     links: {
       type: Object,
       required: true,
-      validator: (value) => {
-        return (
-          Object.prototype.hasOwnProperty.call(value, "Link") &&
-          Object.prototype.hasOwnProperty.call(value, "Network")
-        );
+      default: () => {
+        return {
+          link: "",
+          network: "",
+        };
       },
     },
   },

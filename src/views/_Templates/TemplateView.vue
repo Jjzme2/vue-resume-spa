@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import BaseView from "./BaseView.vue";
+import BaseView from "../BaseView.vue";
 
 export default {
   //   name: "NewView",

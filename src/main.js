@@ -1,9 +1,14 @@
+// Vue stuff
 import { createApp } from "vue";
 import App from "./App.vue";
-import hljs from "highlight.js";
-import "highlight.js/styles/atom-one-dark.css";
 import router from "./router";
 import store from "./store";
+
+// Highlight.js stuff
+import hljs from "highlight.js";
+import "highlight.js/styles/atom-one-dark.css";
+
+// Other
 import utilPlugin from "./assets/util/utilPlugin.js";
 
 const appName = process.env.VUE_APP_APP_NAME || "ILYTAT";

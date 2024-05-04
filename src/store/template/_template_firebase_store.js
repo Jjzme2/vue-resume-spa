@@ -1,5 +1,7 @@
 import apiService from "../apiService";
 
+const collectionName = "OBJECTNAME";
+
 const OBJECTNAME = {
   namespaced: true,
   state: {
@@ -7,10 +9,7 @@ const OBJECTNAME = {
   },
   getters: {
     getAll: (state) => {
-      if (!state.allItems)
-        throw new Error(
-          "No data available in the store, please fetchAll first"
-        );
+      if (!state.allItems) throw new Error("No data available in the store, please fetchAll first");
       return state.allItems;
     },
     getByField: (state) => (field, value) => {
@@ -35,7 +34,7 @@ const OBJECTNAME = {
       commit("appState/setError", null, { root: true });
 
       try {
-        const collection = await apiService.getDocuments("OBJECTNAME");
+        const collection = await apiService.getDocuments(collectionName);
 
         if (!Array.isArray(collection)) {
           throw new Error("Received invalid data from the API");

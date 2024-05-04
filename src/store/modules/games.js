@@ -1,5 +1,7 @@
 import apiService from "../apiService";
 
+const collectionName = "games";
+
 const games = {
   namespaced: true,
   state: {
@@ -35,7 +37,7 @@ const games = {
       commit("appState/setError", null, { root: true });
 
       try {
-        const collection = await apiService.getDocuments("games");
+        const collection = await apiService.getDocuments(collectionName);
 
         if (!Array.isArray(collection)) {
           throw new Error("Received invalid data from the API");

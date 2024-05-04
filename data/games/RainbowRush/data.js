@@ -1,3 +1,5 @@
+const config = import("/data/games/RainbowRush/config.js");
+
 const packs = [
   {
     name: "Rainbow",
@@ -37,5 +39,6 @@ const packs = [
 ];
 export default {
   packs,
+  config,
   // Add more game data here
 };

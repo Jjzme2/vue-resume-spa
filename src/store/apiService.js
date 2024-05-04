@@ -1,23 +1,22 @@
 import { db } from "../.firebase/config";
 import {
-  addDoc,
+  //   addDoc,
   collection,
   doc,
   getDocs,
-  serverTimestamp,
+  //   serverTimestamp,
   setDoc,
 } from "firebase/firestore";
 
-const collections = [{ name: "users" }, { name: "games" }];
+const collections = ["users", "games"];
 
 export default {
   async getDocuments(collectionName, showInConsole = false) {
-    // const snapshot = await db.collection(collectionName).get();
-    if (!collections.find((c) => c.name === collectionName)) {
+    if (!collections.includes(collectionName)) {
       console.error(
-        `Collection ${collectionName} not found in the database. Please try one of the following: ${collections
-          .map((c) => c.name)
-          .join(", ")}`
+        `Collection ${collectionName} not found in the database. Please try one of the following: ${collections.join(
+          ", "
+        )}`
       );
       return;
     }
@@ -26,28 +25,22 @@ export default {
       const snapshot = await getDocs(collection(db, collectionName));
 
       if (showInConsole) {
-        snapshot.forEach((doc) => {
-          // Use this to see the data in the console
-          console.log(doc.id, " => ", doc.data());
-        });
+        snapshot.forEach((doc) =>
+          console.log(`${doc.id} => ${JSON.stringify(doc.data())}`)
+        );
       }
 
-      return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-    } catch (error) {
-      console.error(error, collectionName);
-    }
-  },
+      let documents = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
 
-  async addDocument(collectionName, data) {
-    this.announce(collectionName, data, "add");
-    try {
-      await addDoc(collection(db, collectionName), {
-        ...data,
-        created_on: serverTimestamp(),
-      });
-      return true;
+      // Normalize paths in each document
+      documents.forEach(this.normalizePaths);
+
+      return documents;
     } catch (error) {
-      console.error(error);
+      console.error(`Error fetching documents from ${collectionName}:`, error);
     }
   },
 
@@ -58,18 +51,37 @@ export default {
       await setDoc(docRef, data, { merge: true });
       return true;
     } catch (error) {
-      console.error(error);
+      console.error(`Error setting document in ${collectionName}:`, error);
+    }
+  },
+
+  async deleteDocument(collectionName, documentId) {
+    console.log(
+      `Attempting to delete document with ID: ${documentId} from collection: ${collectionName}`
+    );
+    try {
+      await db.collection(collectionName).doc(documentId).delete();
+      return true;
+    } catch (error) {
+      console.error(`Error deleting document from ${collectionName}:`, error);
+    }
+  },
+
+  normalizePaths(data) {
+    for (let key in data) {
+      if (typeof data[key] === "string") {
+        data[key] = data[key].replace(/\\/g, "/");
+      } else if (typeof data[key] === "object") {
+        this.normalizePaths(data[key]);
+      }
     }
   },
 
   announce(collectionName, data, functionName) {
     console.log(
-      "Attempting to " +
-        functionName +
-        " a new document to the collection: " +
-        collectionName +
-        " with the following data: " +
-        JSON.stringify(data)
+      `Attempting to ${functionName} a new document to the collection: ${collectionName} with the following data: ${JSON.stringify(
+        data
+      )}`
     );
   },
 };
