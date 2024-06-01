@@ -18,6 +18,14 @@ const journals = {
       if (!state.allItems)
         throw new Error("No data available in journals, please fetchAll first");
 
+      for (let i = 0; i < state.allItems.length; i++) {
+        if (!Object.prototype.hasOwnProperty.call(state.allItems[i], field)) {
+          throw new Error(
+            `Field ${field} does not exist in the item at index ${i},( ${state.allItems[i]} )`
+          );
+        }
+      }
+
       const item = state.allItems.find((item) => item[field] === value);
 
       if (!item) {

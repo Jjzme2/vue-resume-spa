@@ -9,20 +9,20 @@
         accomodate!
       </p>
 
-      <journalLibrary></journalLibrary>
+      <JournalLibrary></JournalLibrary>
     </template>
   </BaseView>
 </template>
 
 <script>
 import BaseView from "./BaseView.vue";
-import journalLibrary from "@/components/app/mainElements/journals/journalLibrary.vue";
+import JournalLibrary from "@/components/app/mainElements/journals/JournalLibrary.vue";
 
 export default {
   name: "LibraryView",
   components: {
     BaseView,
-    journalLibrary,
+    JournalLibrary,
   },
   data() {
     return {};

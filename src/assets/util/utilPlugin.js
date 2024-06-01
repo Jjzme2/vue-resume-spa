@@ -17,16 +17,6 @@ const UtilPlugin = {
     // * Called as this.$loggerUtils
     app.config.globalProperties.$loggerUtils = CustomLogger;
 
-    //  String Utils
-    // * Called as this.$stringManipulation
-    app.config.globalProperties.$stringManipulation = StringManipulation;
-    // * Called as this.$stringValidation
-    app.config.globalProperties.$stringValidation = StringValidation;
-    // * Called as this.$stringConversion
-    app.config.globalProperties.$stringConversion = StringConversion;
-    // * Called as this.$stringHelper
-    app.config.globalProperties.$stringHelper = StringHelper;
-
     // * Called as this.$mappingUtils
     app.config.globalProperties.$mappingUtils = MappingUtil;
     // * Called as this.$timeUtils
@@ -40,4 +30,17 @@ const UtilPlugin = {
   },
 };
 
-export default UtilPlugin;
+const StringPlugin = {
+  install(app) {
+    // * Called as this.$stringManipulation
+    app.config.globalProperties.$stringManipulation = StringManipulation;
+    // * Called as this.$stringValidation
+    app.config.globalProperties.$stringValidation = StringValidation;
+    // * Called as this.$stringConversion
+    app.config.globalProperties.$stringConversion = StringConversion;
+    // * Called as this.$stringHelper
+    app.config.globalProperties.$stringHelper = StringHelper;
+  },
+};
+
+export { UtilPlugin, StringPlugin };

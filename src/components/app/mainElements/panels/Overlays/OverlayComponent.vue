@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "ILYTATWindow",
+  name: "OverlayComponent",
   props: {
     windowTitle: {
       type: String,

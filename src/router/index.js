@@ -19,6 +19,7 @@ const routes = [
       hideInNav: true,
     },
   },
+
   {
     path: "/",
     name: "home",
@@ -29,6 +30,9 @@ const routes = [
       hideInNav: false,
     },
   },
+
+  //   Journals
+
   {
     path: "/library",
     name: "library",

@@ -9,7 +9,7 @@ import hljs from "highlight.js";
 import "highlight.js/styles/atom-one-dark.css";
 
 // Other
-import utilPlugin from "./assets/util/utilPlugin.js";
+import { UtilPlugin, StringPlugin } from "./assets/util/utilPlugin.js";
 
 const appName = process.env.VUE_APP_APP_NAME || "ILYTAT";
 
@@ -22,5 +22,6 @@ createApp(App)
   .use(store)
   .use(router)
   .use(hljs.vuePlugin)
-  .use(utilPlugin)
+  .use(StringPlugin)
+  .use(UtilPlugin)
   .mount("#app");

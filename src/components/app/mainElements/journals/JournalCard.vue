@@ -8,7 +8,6 @@
     />
 
     <div class="card-body">
-      <p>{{ journal.description ?? "No Description Available" }}</p>
       <a
         v-if="journal.listing_link"
         :href="journal.listing_link"

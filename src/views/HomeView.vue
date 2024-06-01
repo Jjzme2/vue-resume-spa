@@ -1,5 +1,5 @@
 <template>
-  <BaseView>
+  <BaseView :includeGoHomeButton="false">
     <template #default>
       <alertBox
         v-if="developerMessage.show"
