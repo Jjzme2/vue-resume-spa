@@ -9,6 +9,8 @@ import MappingUtil from "./mappingUtil.js"; //  Mapping Util tool
 import timeUtil from "./timeUtil.js"; //  Time Util tool
 import arrayUtil from "./arrayUtil.js"; //  Array Util tool
 
+import dataUtil from "./dataUtil.js"; //  Data Util tool
+
 const UtilPlugin = {
   install(app) {
     // Add global properties and methods
@@ -31,6 +33,10 @@ const UtilPlugin = {
     app.config.globalProperties.$timeUtils = timeUtil;
     // * Called as this.$arrayUtils
     app.config.globalProperties.$arrayUtils = arrayUtil;
+
+    //  Data Utils
+    // * Called as this.$dataUtils
+    app.config.globalProperties.$dataUtils = dataUtil;
   },
 };
 

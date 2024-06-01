@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import HomeView from "../views/HomeView.vue";
-import GameView from "../views/GameView.vue";
 import VueError from "../views/VueError.vue";
+
+import libraryView from "../views/LibraryView.vue";
 
 const routeColor = "#333333";
 const appName = "ILYTAT";
@@ -29,11 +30,11 @@ const routes = [
     },
   },
   {
-    path: "/games",
-    name: "games",
-    component: GameView,
+    path: "/library",
+    name: "library",
+    component: libraryView,
     meta: {
-      title: `${appName} 🎮`,
+      title: `${appName} 📚`,
       style: { color: routeColor },
       hideInNav: false,
     },

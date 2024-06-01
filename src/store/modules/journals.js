@@ -1,8 +1,8 @@
 import apiService from "../apiService";
 
-const collectionName = "games";
+const collectionName = "journals";
 
-const games = {
+const journals = {
   namespaced: true,
   state: {
     allItems: [],
@@ -10,20 +10,21 @@ const games = {
   getters: {
     getAll: (state) => {
       if (!state.allItems)
-        throw new Error(
-          "No data available in the store, please fetchAll first"
-        );
+        throw new Error("No data available in journals, please fetchAll first");
       return state.allItems;
     },
     getByField: (state) => (field, value) => {
       if (!field || !value) throw new Error("Field and value are required");
-      if (!state.allItems) {
-        throw new Error("No data available in the store");
-      }
-      if (!state.allItems.find((item) => item[field] === value)) {
+      if (!state.allItems)
+        throw new Error("No data available in journals, please fetchAll first");
+
+      const item = state.allItems.find((item) => item[field] === value);
+
+      if (!item) {
         throw new Error(`No item found with ${field} equal to ${value}`);
       }
-      return state.allItems.find((item) => item[field] === value);
+
+      return item;
     },
   },
   mutations: {
@@ -53,4 +54,4 @@ const games = {
   },
 };
 
-export default games;
+export default journals;

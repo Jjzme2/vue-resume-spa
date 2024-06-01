@@ -3,5 +3,4 @@ class BaseCard {
     this.name = name;
   }
 }
-
 export default BaseCard;

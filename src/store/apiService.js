@@ -1,3 +1,4 @@
+// import DevelopmentError from "@/classExtensions/Error/DevelopmentError";
 import { db } from "../.firebase/config";
 import {
   //   addDoc,
@@ -8,17 +9,41 @@ import {
   setDoc,
 } from "firebase/firestore";
 
-const collections = ["users", "games"];
+const collections = ["users", "journals", "content_style"];
 
 export default {
   async getDocuments(collectionName, showInConsole = false) {
     if (!collections.includes(collectionName)) {
-      console.error(
-        `Collection ${collectionName} not found in the database. Please try one of the following: ${collections.join(
-          ", "
-        )}`
+      console.error("An error has occurred", {
+        location: "apiService.js getDocuments()",
+        parameters: { collectionName },
+        cause:
+          "The collection name provided does not exist within the locally defined list of collections.",
+      });
+      this.$loggerUtils.sendLog(
+        "An invalid collection name was provided",
+        {
+          location: "apiService.js getDocuments()",
+          parameters: { collectionName },
+        },
+        "API Error"
       );
-      return;
+      // // !Create an instance of DevelopmentError
+      // const e = new DevelopmentError(
+      //   `Allowed Collection Names: ${collections.join(", ")}`,
+      //   {
+      //     reason: "An invalid collection name was provided",
+      //     data: { collectionName },
+      //   }
+      // );
+      // // !Log the error's read function.
+      // console.log(e.Read());
+      // console.error(
+      //   `Collection ${collectionName} not found in the database. Please try one of the following: ${collections.join(
+      //     ", "
+      //   )}`
+      // );
+      // return;
     }
 
     try {
@@ -36,7 +61,9 @@ export default {
       }));
 
       // Normalize paths in each document
-      documents.forEach(this.normalizePaths);
+      //  ! How needed is this, (It caused an issue with Journals)
+      // console.log("Normalizing paths in documents");
+      // documents.forEach(this.normalizePaths);
 
       return documents;
     } catch (error) {

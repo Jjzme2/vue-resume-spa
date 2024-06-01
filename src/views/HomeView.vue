@@ -8,7 +8,21 @@
         :displayOnOpen="true"
       ></alertBox>
 
-      <navigationPanel :routes="customRoutes"></navigationPanel>
+      <div class="container">
+        <navigationPanel :routes="customRoutes"></navigationPanel>
+
+        <h1>Hi there!</h1>
+
+        <p>
+          Welcome to ILYTAT, a place where we share our thoughts, journals, and
+          provide easy ways to connect with us. We are a group of individuals
+          passionate about technology, art, and the future. Our goal is to share
+          our knowledge and experiences with you. We hope you enjoy your stay
+          and find what you're looking for. If you have any questions or
+          suggestions, feel free to contact us. We're always here to help.
+        </p>
+        <!-- Create a component for featured items. Journals, Blogs, etc. -->
+      </div>
     </template>
   </BaseView>
 </template>
@@ -32,7 +46,12 @@ export default {
         message: "Welcome to the Home View",
         type: "info",
       },
-      customRoutes: [{ name: "Game Room", path: "games" }],
+      customRoutes: [
+        {
+          name: "Our Journals",
+          path: "library",
+        },
+      ],
     };
   },
 };

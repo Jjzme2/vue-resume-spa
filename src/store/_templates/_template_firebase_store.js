@@ -11,19 +11,24 @@ const OBJECTNAME = {
     getAll: (state) => {
       if (!state.allItems)
         throw new Error(
-          "No data available in the store, please fetchAll first"
+          "No data available in OBJECTNAME, please fetchAll first"
         );
       return state.allItems;
     },
     getByField: (state) => (field, value) => {
       if (!field || !value) throw new Error("Field and value are required");
-      if (!state.allItems) {
-        throw new Error("No data available in the store");
-      }
-      if (!state.allItems.find((item) => item[field] === value)) {
+      if (!state.allItems || state.allItems.length === 0)
+        throw new Error(
+          "No data available in OBJECTNAME, please fetchAll first"
+        );
+
+      const item = state.allItems.find((item) => item[field] === value);
+
+      if (!item) {
         throw new Error(`No item found with ${field} equal to ${value}`);
       }
-      return state.allItems.find((item) => item[field] === value);
+
+      return item;
     },
   },
   mutations: {
