@@ -24,11 +24,7 @@ export default {
   },
   methods: {
     getImageUrl(iconName) {
-      const context = require.context(
-        "@/assets/images/social",
-        false,
-        /\.png$/
-      );
+      const context = require.context("/public/images/social", false, /\.png$/);
       return context(`./${iconName}.png`);
     },
   },

@@ -18,3 +18,22 @@ Detail 2:
 	4. Added **Sample_Page** link to existing Journal.
 	5. Added **Active** field to journals to hide inactive journals.
 	6. Added **Go Back Button** to *BaseView* and a *prop* for **includeGoHomeButton**, which is false on **HomeView**
+
+
+## GitChange - d3739149-d8ba-44b9-ad3b-6a6f0d5413ca
+
+Brief Detail: 
+	1. Restructure Codebase.
+	2. Add Journal Model.
+
+Date: 6/5/24
+
+Detail: 
+	1. Added `BaseJournal` Model, and made this the prop required for the `JournalCard` component. 
+   	- **This will likely need to be updated further.**
+  1. Reorganized the code to hopefully make it more readable.
+     - Moved Images to public, instead of being in both `public` and `src`.
+     - Moved `util` from `assets` to `src`.
+     - Renamed `util` to `utils` to match the naming convention.
+     - Moved `data` to `assets`
+     - Removed *Vue* Logo.

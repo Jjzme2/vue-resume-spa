@@ -9,7 +9,7 @@ import hljs from "highlight.js";
 import "highlight.js/styles/atom-one-dark.css";
 
 // Other
-import { UtilPlugin, StringPlugin } from "./assets/util/utilPlugin.js";
+import { UtilPlugin, StringPlugin } from "./utils/utilPlugin.js";
 
 const appName = process.env.VUE_APP_APP_NAME || "ILYTAT";
 

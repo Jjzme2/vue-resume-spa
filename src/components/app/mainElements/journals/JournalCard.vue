@@ -32,10 +32,16 @@
 </template>
 
 <script>
+import BaseJournal from "@/models//journals/BaseJournal";
+
 export default {
   name: "journalCard",
   props: {
-    journal: Object,
+    journal: {
+      type: BaseJournal,
+      required: true,
+      default: () => new BaseJournal(),
+    },
   },
   computed: {
     content_style() {
