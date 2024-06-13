@@ -48,6 +48,7 @@ const storeData = {
       const items = store.getters[`${collectionName}/getAll`].filter(
         (item) => item.active === isActive
       );
+      console.table(items);
       return items.length > 0 ? this.mapArray(items) : [];
     } catch (error) {
       this.handleError(store, error, collectionName);

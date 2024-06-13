@@ -32,15 +32,15 @@
 </template>
 
 <script>
-import Journal from "@/models/book_types/Journal";
+import BaseBook from "@/models/book_types/BaseBook";
 
 export default {
   name: "journalCard",
   props: {
     journal: {
-      type: Journal,
+      type: BaseBook,
       required: true,
-      default: () => new Journal(),
+      default: () => new BaseBook(),
     },
   },
   computed: {

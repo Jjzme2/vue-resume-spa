@@ -54,3 +54,15 @@ Date 6/10/24
 Detail:
 	1. Renamed `BaseJournal` to `BaseBook` and updated all references to this.
 	2. Added `Journal` class which will inherit from `BaseBook`. Modified `JournalCard` to use this.
+
+## Gitchange - 619de80c-20a5-4a0b-bb4d-0c02e0925183
+
+Date: 6/13/24
+
+Detail: Moved to dev PC.
+1. Added Ollie Lumberjack started.
+2. Edited `JournalCard.vue` to allow for BaseBook instead of only Journal. 
+   - This should be edited further to be appropriate. E.G rename Journal, file/class etc.
+3. Modified `HomeView` message.
+
+## Gitchange - 28a8e228-70af-4c75-be7e-2819507e781e

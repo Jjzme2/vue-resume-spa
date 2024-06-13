@@ -14,12 +14,16 @@
         <h1>Hi there!</h1>
 
         <p>
-          Welcome to ILYTAT, a place where we share our thoughts, journals, and
-          provide easy ways to connect with us. We are a group of individuals
-          passionate about technology, art, and the future. Our goal is to share
-          our knowledge and experiences with you. We hope you enjoy your stay
-          and find what you're looking for. If you have any questions or
-          suggestions, feel free to contact us. We're always here to help.
+          Welcome to ILYTAT &mdash; the starting point of our budding literary
+          venture! While our collection may be small for now, we're dedicated to
+          expanding and enhancing it with your invaluable input. Currently
+          showcasing enchanting children's tales, captivating notebooks, and
+          stimulating daily prompts, we're committed to broadening our horizons
+          to cater to your diverse interests. With seamless links to Amazon,
+          your support fuels our growth and evolution. Join us on this exciting
+          journey, and together, let's shape the future of our literary world.
+          Happy exploring! And remember, your feedback guides us as we strive to
+          create an enriching experience for you.
         </p>
         <!-- Create a component for featured items. Journals, Blogs, etc. -->
       </div>
