@@ -25,7 +25,7 @@ Detail 2:
 Brief Detail: 
 	1. Restructure Codebase.
 	2. Add Journal Model.
-
+   
 Date: 6/5/24
 
 Detail: 
@@ -37,3 +37,20 @@ Detail:
      - Renamed `util` to `utils` to match the naming convention.
      - Moved `data` to `assets`
      - Removed *Vue* Logo.
+
+
+## GitChange - eb54bd02-ef96-439f-af44-bde944d5b461
+
+Date: 6/8/24
+
+Detail: 
+	1. Added `Things To Consider.md` to the `.dev/Notes` folder.
+
+---
+Continued:
+
+Date 6/10/24
+
+Detail:
+	1. Renamed `BaseJournal` to `BaseBook` and updated all references to this.
+	2. Added `Journal` class which will inherit from `BaseBook`. Modified `JournalCard` to use this.

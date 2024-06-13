@@ -1,9 +1,8 @@
 import dataUtils from "@/utils/dataUtil";
 
-class BaseJournal {
+class BaseBook {
   constructor(
     name,
-    sample_link,
     listing_link,
     image_link,
     description,
@@ -12,7 +11,6 @@ class BaseJournal {
     isActive
   ) {
     this.name = name;
-    this.sample_page_link = sample_link;
     this.listing_link = listing_link;
     this.image_link = image_link;
     this.description = description;
@@ -27,4 +25,4 @@ class BaseJournal {
     return allStyles.find((style) => style.id === this.content_style);
   }
 }
-export default BaseJournal;
+export default BaseBook;
