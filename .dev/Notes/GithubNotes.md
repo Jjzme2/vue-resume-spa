@@ -43,7 +43,7 @@ Detail:
 
 Date: 6/8/24
 
-Detail: 
+Detail:
 	1. Added `Things To Consider.md` to the `.dev/Notes` folder.
 
 ---
@@ -66,3 +66,18 @@ Detail: Moved to dev PC.
 3. Modified `HomeView` message.
 
 ## Gitchange - 28a8e228-70af-4c75-be7e-2819507e781e
+
+Date: 6/19/24
+
+Detail:
+1. Added new CustomError model.
+2. Added new StyledError Model.
+3. Modified `this.$loggerUtils` to reflect the changes allowing for new calls:
+   - `this.$loggerUtils.sendInfoLog()`
+   - `this.$loggerUtils.sendErrorLog()`
+   - `this.$loggerUtils.sendWarningLog()`
+   - `this.$loggerUtils.sendInfoLogISO()`
+   - `this.$loggerUtils.sendErrorLogISO()`
+   - `this.$loggerUtils.sendWarningLogISO()`
+4. Removed any uncommented code that `console.log`'d anything, in favor of the new logger.
+5. **IMPORTANT** All logs expect a message, and an optional StackTrace string, and an optional AdditionalInfo object -- In that order.

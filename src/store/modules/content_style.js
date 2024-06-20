@@ -27,7 +27,7 @@ const content_style = {
       const item = state.allItems.find((item) => item[field] === value);
 
       if (!item) {
-        console.log(`ITEMS: ${state.allItems}`);
+        this.$loggerUtils.sendInfoLog(`ITEMS: ${state.allItems}`);
         throw new Error(`No item found with ${field} equal to ${value}`);
       }
 

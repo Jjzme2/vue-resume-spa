@@ -70,7 +70,7 @@ export default {
   },
   methods: {
     openOverlay(journal) {
-      console.log("Attempting to open overlay", this.journal);
+      this.$loggerUtils.sendInfoLog("Attempting to open overlay");
       this.journal = journal;
       this.overlayEnabled = true;
     },

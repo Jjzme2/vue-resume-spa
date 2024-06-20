@@ -20,7 +20,11 @@ export default {
           this.htmlContent = html;
         })
         .catch((error) => {
-          console.error("Error loading HTML file:", error);
+          this.$loggerUtils.sendErrorLog(
+            "Error loading HTML file:",
+            "VueError.vue -- loadHTMLFile",
+            { error: error }
+          );
         });
     },
   },

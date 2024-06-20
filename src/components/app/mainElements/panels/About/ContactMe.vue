@@ -55,7 +55,7 @@ export default {
       this.email = "";
       this.message = "";
 
-      console.log("Email sent successfully!");
+      this.loggerUtils.sendInfoLog("Email sent successfully!");
     },
   },
 };

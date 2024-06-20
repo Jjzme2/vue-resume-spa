@@ -61,11 +61,12 @@ export default {
       //! This might be better later on,
       // "https://firebasestorage.googleapis.com/v0/b/YOUR_PROJECT_ID.appspot.com/o/";
       if (!relativePath) {
-        this.$loggerUtils.sendLog(
+        this.$loggerUtils.sendErrorLog(
           `No image found for journal ( ${
             this.journal.name ?? "No Name provided."
           } )`,
-          this.journal
+          "[JournalCard.vue, getImageUrl]",
+          { journalData: JSON.stringify(this.journal) }
         );
       }
       // Ensure the path is correctly encoded

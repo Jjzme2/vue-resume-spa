@@ -20,13 +20,13 @@ export default {
         cause:
           "The collection name provided does not exist within the locally defined list of collections.",
       });
-      this.$loggerUtils.sendLog(
+      this.$loggerUtils.sendErrorLog(
         "An invalid collection name was provided",
+        "[apiService.js, getDocuments()]",
         {
-          location: "apiService.js getDocuments()",
+          type: "API Error",
           parameters: { collectionName },
-        },
-        "API Error"
+        }
       );
       // // !Create an instance of DevelopmentError
       // const e = new DevelopmentError(
@@ -51,7 +51,9 @@ export default {
 
       if (showInConsole) {
         snapshot.forEach((doc) =>
-          console.log(`${doc.id} => ${JSON.stringify(doc.data())}`)
+          this.$loggerUtils.sendInfoLog(
+            `${doc.id} => ${JSON.stringify(doc.data())}`
+          )
         );
       }
 
@@ -83,14 +85,18 @@ export default {
   },
 
   async deleteDocument(collectionName, documentId) {
-    console.log(
+    this.$loggerUtils.sendInfoLog(
       `Attempting to delete document with ID: ${documentId} from collection: ${collectionName}`
     );
     try {
       await db.collection(collectionName).doc(documentId).delete();
       return true;
     } catch (error) {
-      console.error(`Error deleting document from ${collectionName}:`, error);
+      this.$loggerUtils.sendErrorLog(
+        `Error deleting document from ${collectionName}:`,
+        "apiService.js -- deleteDocument",
+        { error: error }
+      );
     }
   },
 
@@ -105,7 +111,7 @@ export default {
   },
 
   announce(collectionName, data, functionName) {
-    console.log(
+    this.$loggerUtils.sendInfoLog(
       `Attempting to ${functionName} a new document to the collection: ${collectionName} with the following data: ${JSON.stringify(
         data
       )}`
