@@ -1,27 +1,8 @@
-/* Use media queries to adjust the layout and style of your elements based on the screen size and orientation of the device */
-@media (max-width: 768px) {
-  .footer {
-    flex-wrap: nowrap; /* Wrap the footer items into multiple rows */
-  }
+/* ----------------------------ELEMENTS---------------------- */
 
-  .main-content {
-	padding: 1rem; /* Smaller padding for smaller screens */
-  }
-
-  .main-layout {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-  }
-}
-
-/* Use CSS variables to define and reuse common values such as colors, fonts, margins, etc. */
-/* Use custom properties to create dynamic values that depend on other properties or conditions */
-.body {
-  background-color: var(--primary-background-color);
-  flex-grow: 1;
-  overflow-y: auto;
-  padding: 1rem;
+a {
+  color: var(--primary-link-color);
+  text-decoration: none;
 }
 
 footer {
@@ -32,6 +13,16 @@ footer {
   margin-bottom: 0;
   margin: .5rem;
   padding: .5rem .8rem;
+}
+
+
+/* ----------------------------CLASSES---------------------- */
+
+.body {
+  background-color: var(--primary-background-color);
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1rem;
 }
 
 .footer a {
@@ -72,4 +63,30 @@ footer {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.nav-panel {
+  box-shadow: var(--primary-shadow);
+  padding: .25rem;
+}
+
+
+/* ----------------------------MEDIA---------------------- */
+
+
+/* Use media queries to adjust the layout and style of your elements based on the screen size and orientation of the device */
+@media (max-width: 768px) {
+  .footer {
+    flex-wrap: nowrap; /* Wrap the footer items into multiple rows */
+  }
+
+  .main-content {
+	padding: 1rem; /* Smaller padding for smaller screens */
+  }
+
+  .main-layout {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+  }
 }

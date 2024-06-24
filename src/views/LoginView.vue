@@ -1,18 +1,18 @@
 <template>
-  <BaseView>
-    <template #default>
-      <!-- Add your code here  -->
-    </template>
+  <BaseView :includeGoHomeButton="false">
+    <template #default> <LoginForm></LoginForm> </template>
   </BaseView>
 </template>
 
 <script>
 import BaseView from "./BaseView.vue";
+import LoginForm from "@/components/app/mainElements/forms/LoginForm.vue";
 
 export default {
-  //   name: "NewView",
+  name: "LoginView",
   components: {
     BaseView,
+    LoginForm,
   },
   data() {
     return {};

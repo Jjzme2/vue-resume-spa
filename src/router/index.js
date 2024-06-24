@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import VueError from "../views/VueError.vue";
 
-import libraryView from "../views/LibraryView.vue";
+import LoginView from "../views/LoginView.vue";
 
 const routeColor = "#333333";
 const appName = "ILYTAT";
@@ -22,23 +22,21 @@ const routes = [
 
   {
     path: "/",
-    name: "home",
-    component: HomeView,
+    name: "login",
+    component: LoginView,
     meta: {
-      title: `${appName} 🏠`,
+      title: `${appName} 🔐`,
       style: { color: routeColor },
       hideInNav: false,
     },
   },
 
-  //   Journals
-
   {
-    path: "/library",
-    name: "library",
-    component: libraryView,
+    path: "/home",
+    name: "home",
+    component: HomeView,
     meta: {
-      title: `${appName} 📚`,
+      title: `${appName} 🏠`,
       style: { color: routeColor },
       hideInNav: false,
     },

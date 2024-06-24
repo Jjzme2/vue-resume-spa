@@ -1,13 +1,9 @@
 <template>
-  <div class="banner">
-    <div>
-      <p class="colored-text-primary">{{ randomQuote.quote }}</p>
-      <p class="mini-text">
-        <a :href="randomQuote.source" target="_blank">{{
-          randomQuote.author
-        }}</a>
-      </p>
-    </div>
+  <div>
+    <p class="colored-text-primary">{{ randomQuote.quote }}</p>
+    <p class="mini-text">
+      <a :href="randomQuote.source" target="_blank">{{ randomQuote.author }}</a>
+    </p>
   </div>
 </template>
 

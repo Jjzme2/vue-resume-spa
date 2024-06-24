@@ -2,8 +2,7 @@ import { createStore } from "vuex";
 // Below, you will import the modules you created in the store folder.
 
 import appState from "./modules/appState";
-import journals from "./modules/journals";
-import content_style from "./modules/content_style";
+import auth from "./modules/authentication";
 
 const store = createStore({
   state: {},
@@ -12,8 +11,7 @@ const store = createStore({
   actions: {},
   modules: {
     appState,
-    journals,
-    content_style,
+    auth,
   },
 });
 

@@ -9,7 +9,7 @@ import {
   setDoc,
 } from "firebase/firestore";
 
-const collections = ["users", "journals", "content_style"];
+const collections = ["users"];
 
 export default {
   async getDocuments(collectionName, showInConsole = false) {
@@ -28,22 +28,6 @@ export default {
           parameters: { collectionName },
         }
       );
-      // // !Create an instance of DevelopmentError
-      // const e = new DevelopmentError(
-      //   `Allowed Collection Names: ${collections.join(", ")}`,
-      //   {
-      //     reason: "An invalid collection name was provided",
-      //     data: { collectionName },
-      //   }
-      // );
-      // // !Log the error's read function.
-      // console.log(e.Read());
-      // console.error(
-      //   `Collection ${collectionName} not found in the database. Please try one of the following: ${collections.join(
-      //     ", "
-      //   )}`
-      // );
-      // return;
     }
 
     try {
@@ -61,11 +45,6 @@ export default {
         id: doc.id,
         ...doc.data(),
       }));
-
-      // Normalize paths in each document
-      //  ! How needed is this, (It caused an issue with Journals)
-      // console.log("Normalizing paths in documents");
-      // documents.forEach(this.normalizePaths);
 
       return documents;
     } catch (error) {

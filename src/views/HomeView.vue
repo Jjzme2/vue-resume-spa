@@ -8,25 +8,18 @@
         :displayOnOpen="true"
       ></alertBox>
 
-      <div class="container">
-        <navigationPanel :routes="customRoutes"></navigationPanel>
-
-        <h1>Hi there!</h1>
-
-        <p>
-          Welcome to ILYTAT &mdash; the starting point of our budding literary
-          venture! While our collection may be small for now, we're dedicated to
-          expanding and enhancing it with your invaluable input. Currently
-          showcasing enchanting children's tales, captivating notebooks, and
-          stimulating daily prompts, we're committed to broadening our horizons
-          to cater to your diverse interests. With seamless links to Amazon,
-          your support fuels our growth and evolution. Join us on this exciting
-          journey, and together, let's shape the future of our literary world.
-          Happy exploring! And remember, your feedback guides us as we strive to
-          create an enriching experience for you.
-        </p>
-        <!-- Create a component for featured items. Journals, Blogs, etc. -->
+      <div class="home-message">
+        <p>Welcome to ILYTAT.</p>
+        <p>A place where there is always someone looking out for you.</p>
       </div>
+
+      <textSubmissionElement
+        class="force-down"
+        prompt="What's on your mind?"
+        maxLength="250"
+        showSubmitButton
+        @submit="submitValue"
+      ></textSubmissionElement>
     </template>
   </BaseView>
 </template>
@@ -34,14 +27,14 @@
 <script>
 import BaseView from "./BaseView.vue";
 import alertBox from "@/components/app/mainElements/alerts/alertBox.vue";
-import navigationPanel from "@/components/app/mainElements/panels/NavigationPanel.vue";
+import textSubmissionElement from "@/components/app/mainElements/submissionElements/TextSubmissionElement.vue";
 
 export default {
   name: "HomeView",
   components: {
     BaseView,
     alertBox,
-    navigationPanel,
+    textSubmissionElement,
   },
   data() {
     return {
@@ -50,13 +43,12 @@ export default {
         message: "Welcome to the Home View",
         type: "info",
       },
-      customRoutes: [
-        {
-          name: "Our Journals",
-          path: "library",
-        },
-      ],
     };
+  },
+  methods: {
+    submitValue(value) {
+      console.log(value);
+    },
   },
 };
 </script>
@@ -64,5 +56,15 @@ export default {
 <style scoped>
 h1 {
   margin-bottom: 1rem;
+}
+
+.home-message {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.force-down {
+  margin-top: 5rem;
 }
 </style>
