@@ -6,7 +6,7 @@ class TimeUtil {
    */
   static getCurrentTime(
     locale = "en-US",
-    twelveHour = false,
+    twelveHour = true,
     timeZone = "UTC",
     timeStyle = "medium"
   ) {

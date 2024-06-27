@@ -1,10 +1,17 @@
-// store/modules/authentication.js
+import {
+  initAuth0,
+  loginWithRedirect,
+  logout as auth0Logout,
+  getUser,
+  isAuthenticated,
+} from "/services/authService";
 
 const authentication = {
   namespaced: true,
   state: {
-    user: null,
     isAuthenticated: false,
+    user: null,
+    loading: true,
   },
   getters: {
     isAuthenticated(state) {
@@ -13,43 +20,73 @@ const authentication = {
     getUser(state) {
       return state.user;
     },
+    isLoading(state) {
+      return state.loading;
+    },
   },
   mutations: {
+    setAuthenticated(state, isAuthenticated) {
+      state.isAuthenticated = isAuthenticated;
+    },
     setUser(state, data) {
       state.user = data;
       state.isAuthenticated = !!data;
     },
+    setLoading(state, loading) {
+      state.loading = loading;
+    },
   },
   actions: {
-    async login({ commit }, { loginWithRedirect }) {
-      commit("setLoading", true, { root: true });
-      commit("setError", null, { root: true });
+    async initAuth({ commit }) {
+      commit("setLoading", true);
 
       try {
-        await loginWithRedirect({
-          appState: { target: "/" },
-        });
-        // user data will be set in the component through the Auth0 hook and watch mechanism
+        await initAuth0();
+        const authStatus = await isAuthenticated();
+        commit("setAuthenticated", authStatus);
+
+        if (authStatus) {
+          const user = await getUser();
+          commit("setUser", user);
+        }
       } catch (error) {
-        commit("setError", error.message, { root: true });
+        console.error(error);
       } finally {
-        commit("setLoading", false, { root: true });
+        commit("setLoading", false);
       }
     },
-
-    async logout({ commit }, { logout }) {
-      commit("setLoading", true, { root: true });
-      commit("setError", null, { root: true });
-
+    async login({ commit }) {
+      commit("setLoading", true);
       try {
-        await logout({
-          returnTo: window.location.origin,
-        });
+        await loginWithRedirect();
+      } catch (error) {
+        console.error(error);
+      } finally {
+        commit("setLoading", false);
+      }
+    },
+    async logout({ commit }) {
+      commit("setLoading", true);
+      try {
+        await auth0Logout();
+        commit("setAuthenticated", false);
         commit("setUser", null);
       } catch (error) {
-        commit("setError", error.message, { root: true });
+        console.error(error);
       } finally {
-        commit("setLoading", false, { root: true });
+        commit("setLoading", false);
+      }
+    },
+    async register({ commit }) {
+      commit("setLoading", true);
+      try {
+        await loginWithRedirect({
+          screen_hint: "signup",
+        });
+      } catch (error) {
+        console.error(error);
+      } finally {
+        commit("setLoading", false);
       }
     },
   },

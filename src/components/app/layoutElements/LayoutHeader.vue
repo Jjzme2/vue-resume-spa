@@ -38,9 +38,16 @@ export default {
         new NavigationOption("Blog", "blog"),
         new NavigationOption("Forums", "forums"),
         new NavigationOption("Contact", "contact"),
-        new NavigationOption("Login/Register", "login"),
       ],
     };
+  },
+  watch: {
+    // Once the user is logged in, an option to logout should appear in the navigation panel.
+    isAuthenticated() {
+      if (this.$store.getters["auth/isAuthenticated"]) {
+        this.customRoutes.push(new NavigationOption("Logout", "logout"));
+      }
+    },
   },
   methods: {
     toggleNav() {

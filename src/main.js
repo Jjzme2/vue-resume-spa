@@ -10,6 +10,7 @@ import "highlight.js/styles/atom-one-dark.css";
 
 // Auth0
 import { createAuth0 } from "@auth0/auth0-vue";
+import { initAuth0 } from "/services/authService";
 
 // Other
 import { UtilPlugin, StringPlugin } from "./utils/utilPlugin.js";
@@ -36,6 +37,17 @@ app
         // redirect_uri: process.env.VUE_APP_AUTH0_CALLBACK_URL,
         redirect_uri: window.location.origin,
       },
+      onRedirectCallback: (appState) => {
+        router.push(
+          appState && appState.targetUrl
+            ? appState.targetUrl
+            : window.location.pathname
+        );
+      },
     })
   )
   .mount("#app");
+
+initAuth0().then(() => {
+  store.dispatch("authentication/initAuth");
+});

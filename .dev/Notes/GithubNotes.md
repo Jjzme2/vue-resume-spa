@@ -23,3 +23,22 @@ I might want a place to remind myself of the many changes I make between Git Pus
   - Added the `TextSubmissionElement` component to the `src/components/app/mainElements/submissionElements` directory.
   - Added in Auth0 for authentication.
   - Will need to continue working on `LoginForm.vue`. It seems like the user is working as expected, but the user may not be being stored in the Vuex store.
+
+GitChange - 1e3b3b3b-9f6d-4054-89fd-549c65febfe2
+
+- Date: 06/26/2024
+
+- Detail: Adding new Models to the application.
+
+
+- Steps
+  1. Added in the `BaseReport` Model.
+  2. Added in the `SessionReport` Model.
+  3. Added in the `DailyReport` Model.
+
+
+GitChange - 4dfa9317-14bb-431f-9849-e0dee80e7d00
+
+- Date: 06/27/2024
+- Detail: Decision to revert this to a Single Page Application Resume.
+- Will create new card game using Vue and Express in a new folder.
