@@ -1,7 +1,7 @@
 <template>
   <div class="layout-header">
     <div class="header-logo">
-      <img src="/images/new_logo_jpg.jpg" alt="logo" class="header-logo" />
+      <img src="/images/new_logo_png.png" alt="logo" class="header-logo" />
     </div>
 
     <quoteDisplay></quoteDisplay>
@@ -34,10 +34,10 @@ export default {
       isNavVisible: false,
       customRoutes: [
         new NavigationOption("Home", "home"),
-        new NavigationOption("About", "about"),
-        new NavigationOption("Blog", "blog"),
-        new NavigationOption("Forums", "forums"),
-        new NavigationOption("Contact", "contact"),
+        // new NavigationOption("About", "about"),
+        // new NavigationOption("Blog", "blog"),
+        // new NavigationOption("Forums", "forums"),
+        // new NavigationOption("Contact", "contact"),
       ],
     };
   },

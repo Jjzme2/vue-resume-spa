@@ -10,16 +10,16 @@
 
       <div class="home-message">
         <p>Welcome to ILYTAT.</p>
-        <p>A place where there is always someone looking out for you.</p>
+        <p>A place where dreams begin.</p>
       </div>
 
-      <textSubmissionElement
+      <!-- <textSubmissionElement
         class="force-down"
         prompt="What's on your mind?"
         maxLength="250"
         showSubmitButton
         @submit="submitValue"
-      ></textSubmissionElement>
+      ></textSubmissionElement> -->
     </template>
   </BaseView>
 </template>
@@ -27,20 +27,20 @@
 <script>
 import BaseView from "./BaseView.vue";
 import alertBox from "@/components/app/mainElements/alerts/alertBox.vue";
-import textSubmissionElement from "@/components/app/mainElements/submissionElements/TextSubmissionElement.vue";
+// import textSubmissionElement from "@/components/app/mainElements/submissionElements/TextSubmissionElement.vue";
 
 export default {
   name: "HomeView",
   components: {
     BaseView,
     alertBox,
-    textSubmissionElement,
+    // textSubmissionElement,
   },
   data() {
     return {
       developerMessage: {
-        show: 0,
-        message: "Welcome to the Home View",
+        show: 1,
+        message: "Big changes are coming soon!",
         type: "info",
       },
     };

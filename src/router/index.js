@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import VueError from "../views/VueError.vue";
 
-import LoginView from "../views/LoginView.vue";
+// import LoginView from "../views/LoginView.vue";
 
 const routeColor = "#333333";
 const appName = "ILYTAT";
@@ -20,19 +20,19 @@ const routes = [
     },
   },
 
-  {
-    path: "/",
-    name: "login",
-    component: LoginView,
-    meta: {
-      title: `${appName} 🔐`,
-      style: { color: routeColor },
-      hideInNav: false,
-    },
-  },
+  //   {
+  //     path: "/",
+  //     name: "login",
+  //     component: LoginView,
+  //     meta: {
+  //       title: `${appName} 🔐`,
+  //       style: { color: routeColor },
+  //       hideInNav: false,
+  //     },
+  //   },
 
   {
-    path: "/home",
+    path: "/",
     name: "home",
     component: HomeView,
     meta: {
