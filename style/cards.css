@@ -1,3 +1,66 @@
+/* Base card styles */
+.card {
+  border: 1px solid var(--primary-border-color);
+  background-color: var(--primary-panel-color);
+  margin: 1rem auto; /* Updated margin for spacing */
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 0.5rem; /* Added subtle rounded corners */
+}
+
+.card-sm {
+  max-width: 12rem;
+  max-height: 30rem;
+}
+
+.card-md {
+  max-width: 18rem;
+  max-height: 40rem;
+}
+
+.card-lg {
+  max-width: 24rem;
+  max-height: 50rem;
+}
+
+/* Card image styles */
+.card-img-top {
+  width: 100%;
+  height: 100%;
+}
+
+/* Card content styles */
+.card-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-text-color);
+  margin-bottom: 1rem;
+}
+
+
+.card-body {
+  font-size: 1rem;
+  color: var(--primary-text-color);
+  width: 95%;
+  margin: 1.5rem auto;
+}
+
+.card-body p {
+  background-color: var(--secondary-panel-color);
+  color: var(--secondary-text-color);
+  font-family: var(--secondary-font-family);
+  font-size: 12px;
+  padding: 0.25rem;
+  margin: 2.25rem auto;
+  overflow-y: auto;
+  height: 75px;
+}
+
+.card-body a {
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Grid */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -5,93 +68,36 @@
   margin-top: 2rem;
 }
 
-.coding-language-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  padding: 1rem;
-  background-color: var(--color-primary);
-  border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s;
-  width: 100%;
+@media screen and (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-.coding-language-card h2,
-.coding-language-card p {
-  margin: 0 auto;
-  color: var(--color-text);
-}
+/* Coding Language Card (can inherit from base card) */
 
-.coding-language-card h2 {
-  font-size: 1.5rem;
-}
-
-.coding-language-card p {
-  font-size: 1rem;
-}
-
-.coding-language-card textarea {
-  width: 90%;
-  height: 100%;
-  padding: 1rem;
-  font-size: .75rem;
-  color: var(--color-text);
-  background-color: var(--primary-panel-color);
-  border: none;
-  border-radius: 0.5rem;
-  resize: none;
-}
-
-/* Style the scrollbar for webkit-based browsers */
-.coding-language-card textarea::-webkit-scrollbar {
-  width: 0;
-}
-
-.coding-language-card textarea::-webkit-scrollbar-thumb {
-  background-color: var(--color-primary);
-  border-radius: 4px;
-}
-
-/* Style the scrollbar for other browsers */
-.coding-language-card textarea {
-  scrollbar-width: none;
-  scrollbar-color: var(--color-primary) var(--primary-panel-color);
-}
-
-
+/* Interest Card (can inherit from base card) */
 .interest-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 0.3s ease-in-out;
+  border: none; /* Removed border for a cleaner look */
+  background-color: var(--interest-card-background); /* Use a designated background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Lighter shadow for better contrast */
+  border-radius: 0.5rem;
+  padding: 2rem; /* Increased padding for content breathing room */
+  margin: 1rem;
+  transition: transform 0.2s ease-in-out;
 }
 
 .interest-card:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); /* Subtle hover effect */
 }
 
 .interest-name {
   font-size: 1.5em;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .interest-level,
 .interest-appeal {
   font-size: 1em;
-  color: #666;
-}
-
-@media screen and (max-width: 768px) {
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
+  color: var(--interest-card-text-color); /* Use a designated text color */
 }
