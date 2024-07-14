@@ -42,6 +42,7 @@ export default {
         this.fileName
       );
       if (!markdown) {
+        console.error("Markdown file [" + this.fileName + "] not found.");
         return null;
       }
       return markdown;

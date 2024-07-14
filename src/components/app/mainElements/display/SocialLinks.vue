@@ -14,21 +14,17 @@ export default {
     links: {
       type: Object,
       required: true,
-      validator: (value) => {
-        return (
-          Object.prototype.hasOwnProperty.call(value, "Link") &&
-          Object.prototype.hasOwnProperty.call(value, "Network")
-        );
+      default: () => {
+        return {
+          link: "",
+          network: "",
+        };
       },
     },
   },
   methods: {
     getImageUrl(iconName) {
-      const context = require.context(
-        "@/assets/images/social",
-        false,
-        /\.png$/
-      );
+      const context = require.context("/public/images/social", false, /\.png$/);
       return context(`./${iconName}.png`);
     },
   },

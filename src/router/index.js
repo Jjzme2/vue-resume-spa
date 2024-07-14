@@ -1,90 +1,44 @@
 import { createRouter, createWebHistory } from "vue-router";
+
 import HomeView from "../views/HomeView.vue";
-import WhoIsILYTAT from "../views/WhoIsILYTAT.vue";
-import BlogView from "../views/BlogView.vue";
-import ServicesView from "../views/ServicesView.vue";
-import ProjectsView from "../views/ProjectsView.vue";
-import ResumeView from "../views/ResumeView.vue";
 import VueError from "../views/VueError.vue";
+
+// import LoginView from "../views/LoginView.vue";
 
 const routeColor = "#333333";
 const appName = "ILYTAT";
 
 const routes = [
   {
-    path: "/vue-resume-spa/:pathMatch(.*)*",
-    redirect: "/ILYTAT-Resume",
+    path: "/:pathMatch(.*)*",
+    name: "not-found",
+    component: VueError,
+    meta: {
+      title: `${appName} 🔥`,
+      style: { color: routeColor },
+      hideInNav: true,
+    },
   },
-  // Local routes
+
+  //   {
+  //     path: "/",
+  //     name: "login",
+  //     component: LoginView,
+  //     meta: {
+  //       title: `${appName} 🔐`,
+  //       style: { color: routeColor },
+  //       hideInNav: false,
+  //     },
+  //   },
+
   {
     path: "/",
     name: "home",
     component: HomeView,
     meta: {
-      title: `${appName} -- Home`,
+      title: `${appName} 🏠`,
       style: { color: routeColor },
       hideInNav: false,
-    },
-  },
-  {
-    path: "/Who-Is-ILYTAT",
-    name: "WhoIsILYTAT",
-    component: WhoIsILYTAT,
-    meta: {
-      title: `${appName} -- About`,
-      style: { color: routeColor },
-      hideInNav: false,
-    },
-  },
-  {
-    path: "/ILYTAT-Blog",
-    name: "ILYTATBlog",
-    component: BlogView,
-    meta: {
-      title: `${appName} -- Thoughts`,
-      style: { color: routeColor },
-      hideInNav: false,
-    },
-  },
-  {
-    path: "/ILYTAT-Services",
-    name: "ILYTATServices",
-    component: ServicesView,
-    meta: {
-      title: `${appName} -- Services`,
-      style: { color: routeColor },
-      hideInNav: false,
-    },
-  },
-  {
-    path: "/ILYTAT-Projects",
-    name: "ILYTATProjects",
-    component: ProjectsView,
-    meta: {
-      title: `${appName} -- Projects`,
-      style: { color: routeColor },
-      hideInNav: false,
-    },
-  },
-  {
-    path: "/ILYTAT-Resume",
-    name: "ILYTATResume",
-    component: ResumeView,
-    meta: {
-      title: `${appName} -- Resume`,
-      style: { color: routeColor },
-      hideInNav: false,
-    },
-  },
-  //   Catch all route
-  {
-    path: "/:pathMatch(.*)*",
-    name: "not-found",
-    component: VueError,
-    meta: {
-      title: `${appName} -- 404`,
-      style: { color: routeColor },
-      hideInNav: true,
     },
   },
 ];

@@ -3,6 +3,7 @@
     <template #header v-if="includeHeader"></template>
     <template #default>
       <div class="main-content">
+        <goBackButton v-if="includeGoHomeButton" />
         <slot></slot>
       </div>
     </template>
@@ -12,11 +13,13 @@
 
 <script>
 import mainLayout from "@/components/app/layoutElements/MainLayout.vue";
+import goBackButton from "@/components/app/mainElements/buttons/GoToButton.vue";
 
 export default {
   name: "BaseView",
   components: {
     mainLayout,
+    goBackButton,
   },
   props: {
     includeHeader: {
@@ -24,6 +27,10 @@ export default {
       default: true,
     },
     includeFooter: {
+      type: Boolean,
+      default: true,
+    },
+    includeGoHomeButton: {
       type: Boolean,
       default: true,
     },

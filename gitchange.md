@@ -88,12 +88,16 @@ Notes:
 
 ## GitChange 3
 
-Brief Description: Added a few new components that should later be slotted into a video player component.
-  - YoutubeVideo.vue
-  - InternalVideo.vue
-- Added a new Javascript Export: vocabulary.js. This should be used to fetch the definition of a word so we can display it later when the user hoveres over the word.
-- Added a new `lessons` folder in the `assets/markdown` directory. This will be used to store all the markdown files for the lessons.
-  - Created a _LessonPlan.md file to get me started with creating the lessons. 
+Brief Description: Added a few new components that should later be slotted into a video player
+component.
+
+- YoutubeVideo.vue
+- InternalVideo.vue
+- Added a new Javascript Export: vocabulary.js. This should be used to fetch the definition of a
+  word so we can display it later when the user hoveres over the word.
+- Added a new `lessons` folder in the `assets/markdown` directory. This will be used to store all
+  the markdown files for the lessons.
+  - Created a \_LessonPlan.md file to get me started with creating the lessons.
   - Created a TopThree.md file to get me started talking about `HTML`, `CSS`, and `JavaScript`.
 
 Date: 04/11/2024
@@ -104,7 +108,7 @@ Changes:
 - Added InternalVideo.vue
 - Added vocabulary.js
 - Added lessons folder in assets/markdown
-  - Added _LessonPlan.md
+  - Added \_LessonPlan.md
   - Added TopThree.md
 
 Notes:
@@ -113,14 +117,51 @@ Notes:
 - The InternalVideo.vue component will be used to display videos that are stored locally.
 - The vocabulary.js file will be used to fetch the definition of a word.
 - The lessons folder will be used to store all the markdown files for the lessons.
-- The _LessonPlan.md file will be used to get me started with creating the lessons.
+- The \_LessonPlan.md file will be used to get me started with creating the lessons.
 
 ## GitChange 4
 
-Brief Description: Minor changes before moving to new branch added a little more content to the TopThree.md file.
+Brief Description: Minor changes before moving to new branch added a little more content to the
+TopThree.md file.
 
 Date: 04/12/2024
 
 Changes:
 
 - Added more CSS content to the TopThree.md file.
+
+## GitChange 5
+
+Brief Description: Complete Revamp of ILYTAT Website. This will now be a game website that will
+include mostly cards games.
+
+Date: 04/23/2024
+
+Changes:
+
+1. Removed about-me.css
+2. Modified cssImporter to include new `socials.css` file.
+3. Moved Social Buttons to `socials.css`
+4. Deleted `Vocabulary.js`
+5. Modified `blogPosts.js`
+   - Removed all existing blog posts.
+   - Added a template object for potential future posts.
+6. Added `data.js` to the new folder at: `src/assets/data/games/RainbowRush/`
+7. Removed all existing blog post/lesson/\_old files.
+8. Added commented examples to `stringManipulation.js`
+9. Added a new `TemplateView.vue`. This is a template for other views to use.
+10. Removed old, outdated View template file.
+11. Removed WarriorsView.vue
+12. Modified `HomeView.vue` to reflect the new changes. Added `customRoutes` data to the
+    HomeView.vue file.
+13. Added `games.js` to the store folder.
+14. Added `_template_firebase_store.js` to the store folder.
+15. Added `internalVideo.vue` and `YoutubeVideo.vue` to the components folder.
+
+### These will likely need to be continued in the next GitChange.
+
+1.  Added `ILYTATWindow.vue` a simple window with an optional close button. This has a slot for
+    another component.
+2.  Modified `GamePanel.vue` This is reflective of Rainbow Rush and should be changed or renamed.
+3.  Added a `SelectorTool.vue` Which is similar to my previous `Selector.vue` but with a few
+    changes.
